@@ -1,0 +1,44 @@
+.muted { opacity: 0.8; }
+.tiny { font-size: 0.8rem; }
+
+/* simple utilities */
+.center { text-align: center; }
+
+/* reusable rainbow text */
+.rainbow-text {
+  background: linear-gradient(90deg,#ff0040,#ff8a00,#ffe600,#31d843,#1ecde1,#7b61ff,#ff2bd6,#ff0040);
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-slide 3s linear infinite;
+}
+.rainbow-text:hover, .rainbow-text:focus {
+  animation-duration: 1.5s;
+  text-shadow: 0 0 8px rgba(255,255,255,.25);
+}
+@media (prefers-reduced-motion: reduce) { .rainbow-text { animation: none; } }
+
+/* gradient text utilities for Q/A */
+.text-gradient-red {
+  background: linear-gradient(90deg,#ff1a1a,#ff6600);
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: red-slide 4s linear infinite;
+}
+.text-gradient-green {
+  background: linear-gradient(90deg,#00cc44,#33ff99);
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: green-slide 4s linear infinite;
+}
+
+/* reusable rainbow background helper */
+.rainbow {
+background: linear-gradient(135deg,
+#ff0040, #ff8a00, #ffe600, #31d843,
+#1ecde1, #7b61ff, #ff2bd6, #ff0040);
+background-size: 400% 400%;
+animation: rainbow-flow 8s ease infinite;
+}

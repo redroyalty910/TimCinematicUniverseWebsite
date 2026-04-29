@@ -1,0 +1,161 @@
+:root{
+  --rainbow:linear-gradient(90deg,#ff0040,#ff8a00,#ffe600,#31d843,#1ecde1,#7b61ff,#ff2bd6,#ff0040);
+}
+
+/* Background */
+body{
+  background: #F1E4FA;
+}
+
+/* Wrapper */
+#contact{max-width:980px;margin:26px auto 70px;padding:0 18px;text-align:center;}
+#contact *{line-height:1.55;}
+#contact img{max-width:100%;height:auto;}
+
+/* Text helpers */
+.muted{opacity:.8;}
+.hint{display:block;margin-top:.7rem;opacity:.75;}
+.tiny{font-size:.85rem;}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;}
+
+/* Rainbow glass border engine */
+:where(.contact-hero,.btn,.contact-form,.form-row input,.form-row select,.form-row textarea,.faq-item){
+  --rg-fill:rgba(255,255,255,.86);
+  border:2px solid transparent;
+  background:
+    linear-gradient(0deg,var(--rg-fill),var(--rg-fill)) padding-box,
+    var(--rainbow) border-box;
+  background-size:100% 100%,400% 400%;
+  animation:rainbow-bg 15s linear infinite;
+}
+
+/* hero */
+.contact-hero{
+  max-width:760px;
+  margin:18px auto;
+  padding:18px 16px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,.10);
+}
+
+/* Buttons under hero */
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:12px;}
+
+/* hub */
+.contact-hub{display:flex;justify-content:center;margin:18px 0 8px;}
+
+.hub-card{
+  width:min(860px,100%);
+  padding:16px;
+  border-radius:18px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  z-index:0;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+/* rainbow shell */
+.hub-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:20px;
+  background:var(--rainbow);
+  background-size:400% 400%;
+  animation:rainbow-bg 15s linear infinite;
+  z-index:-1;
+}
+
+/* readable interior */
+.hub-card::after{
+  content:"";
+  position:absolute;
+  inset:2px;
+  border-radius:16px;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(10px);
+  z-index:-1;
+}
+
+/* SOCIAL ICONS */
+.social-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:12px;}
+
+.social-row a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;height:46px;
+  padding:6px;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,.10);
+  background:rgba(255,255,255,.60);
+  box-shadow:0 6px 16px rgba(0,0,0,.10);
+  transition:transform .12s ease,filter .12s ease,box-shadow .12s ease;
+}
+.social-row a:hover{transform:translateY(-2px);filter:brightness(1.03);}
+
+.social-row img{
+  width:34px!important;height:34px!important;
+  max-width:34px!important;max-height:34px!important;
+  object-fit:contain;display:block;
+}
+
+/* buttons */
+.btn{
+  appearance:none;
+  color:#000;
+  padding:.7rem 1rem;
+  border-radius:12px;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  transition:transform 120ms ease,filter 120ms ease,box-shadow 120ms ease;
+  --rg-fill:rgba(255,255,255,.82);
+}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.04);box-shadow:0 10px 20px rgba(0,0,0,.12);}
+.btn.wide{width:100%;}
+.btn.ghost{--rg-fill:rgba(255,255,255,.55);}
+
+/* form */
+.quick-note{margin:22px auto 0;max-width:860px;}
+
+.contact-form{
+  text-align:left;
+  border-radius:18px;
+  padding:16px;
+  box-shadow:0 8px 20px rgba(0,0,0,.10);
+  --rg-fill:rgba(255,255,255,.92);
+}
+
+.form-row{display:grid;gap:.55rem;margin-bottom:1rem;}
+
+.form-row input,
+.form-row select,
+.form-row textarea{
+  width:100%;
+  box-sizing:border-box;
+  padding:.75rem .85rem;
+  border-radius:12px;
+  color:#000;
+  --rg-fill:rgba(255,255,255,.96);
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder{color:#666;}
+
+/* FAQ */
+.faq{max-width:860px;margin:24px auto 0;text-align:left;}
+
+.faq-item{
+  border-radius:14px;
+  padding:.9rem 1rem;
+  margin-bottom:.75rem;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+  --rg-fill:rgba(255,255,255,.92);
+}
+.faq-item summary{cursor:pointer;}
+.faq-item p{margin:.6rem 0 .25rem;}

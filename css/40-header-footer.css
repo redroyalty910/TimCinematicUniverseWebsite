@@ -1,0 +1,28 @@
+/* Nav links */
+nav a { margin: 0 1rem; text-decoration: none; font-weight: bold; color: #000000; }
+nav a:hover { color: #ff0000; }
+
+
+/* Rainbow animated header */
+header {
+background: linear-gradient(90deg,
+#ff0040, #ff8a00, #ffe600, #31d843, #1ecde1, #7b61ff, #ff2bd6, #ff0040);
+background-size: 400% 400%;
+animation: rainbow-bg 15s linear infinite;
+color: #fff;
+}
+header h1, header nav a { color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.6); }
+
+
+/* Rainbow footer box */
+footer,
+.site-footer {
+max-width: 2000px; margin: 2rem auto 1.5rem; padding: 1.5rem; border-radius: 18px;
+background: linear-gradient(90deg,
+#ff0040, #ff8a00, #ffe600, #31d843, #1ecde1, #7b61ff, #ff2bd6, #ff0040);
+background-size: 400% 400%; animation: rainbow-bg 15s linear infinite;
+color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+border: 1px solid rgba(0,0,0,0.12); box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+footer a, .site-footer a { color: #fff; text-decoration: underline; }
+@media (max-width: 640px) { footer, .site-footer { margin: 3rem .85rem; border-radius: 20px; } }

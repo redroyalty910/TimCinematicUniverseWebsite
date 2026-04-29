@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" id="favicon" type="image/gif" href="/images/STARGORE_BLINK.gif" sizes="32x32">
+  <title>☆ THE TIM CINEMATIC UNIVERSE ☆</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/01-base.css" />
+  <link rel="stylesheet" href="/css/02-utilities.css" />
+  <link rel="stylesheet" href="/css/03-animations.css" />
+  <link rel="stylesheet" href="/css/10-layout.css" />
+  <link rel="stylesheet" href="/css/20-components.css" />
+  <link rel="stylesheet" href="/css/30-timeline.css" />
+  <link rel="stylesheet" href="/css/40-header-footer.css" />
+  <link rel="stylesheet" href="/css/80-fragments.css" />
+  <link rel="stylesheet" href="/css/90-mobile.css" />
+</head>
+
+<body>
+  <header>
+    <h1 style="font-size: 3rem;">☆ THE TIM CINEMATIC UNIVERSE ☆</h1>
+    <nav>
+      <a href="/html/index.html">Home!</a>
+      <a href="/html/tim.html">Tim ☆!</a>
+      <a href="/html/projects.html">Projects!</a>
+      <a href="/html/art.html">Art!</a>
+      <a href="/html/blog.html">Blog!</a>
+      <!--<a href="shop.html">Shop!</a>-->
+      <a href="/html/contact.html">Contact!</a>
+    </nav>
+  </header>
+
+  <main class="frag-page">
+    <section class="frag-hero">
+      <h1 class="frag-title">TIM AND HIS MISPLACED ARTWORKS ☆</h1>
+      <p class="frag-sub">
+        this page has all the things that I kind of just don't know what to do with.
+      </p>
+
+      <div class="frag-controls">
+        <div class="frag-filters" role="tablist" aria-label="Fragment filters">
+          <button class="chip is-active" data-filter="all" role="tab">All</button>
+          <button class="chip" data-filter="poem" role="tab">Poems</button>
+          <button class="chip" data-filter="photo" role="tab">Photos</button>
+          <button class="chip" data-filter="misc" role="tab">Misc</button>
+        </div>
+
+        <div class="frag-actions">
+          <button class="chip chip-ghost" id="shuffleBtn" type="button" title="Shuffle at em'">
+            Shuffle
+          </button>
+
+          <button class="chip chip-ghost" id="sortNewestBtn" type="button">
+            Newest
+          </button>
+
+          <button class="chip chip-ghost" id="sortOldestBtn" type="button">
+            Oldest
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- grid -->
+    <section class="frag-grid" id="fragGrid">
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-05-28">
+        <a class="frag-open" href="/images/fraudinflowers_poem.png" data-kind="image" data-title="fraudinflowers_poem" data-sub="poem ☆ 5/28/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/fraudinflowers_poem.png"
+                 alt="Poem scan: fraudinflowers"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Fraud In Flowers</div>
+            <div class="frag-tag">poem ☆ 5/28/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-11-28">
+        <a class="frag-open" href="/images/72_poem.png" data-kind="image" data-title="72_poem" data-sub="poem ☆ 11/28/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/72_poem.png"
+                 alt="Poem scan: 72"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">72</div>
+            <div class="frag-tag">poem ☆ 11/28/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-20">
+        <a class="frag-open" href="/images/constellationthief_poem.png" data-kind="image" data-title="constellationthief_poem" data-sub="poem ☆ 12/20/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/constellationthief_poem.png"
+                 alt="Poem scan: constellationthief"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Constellation-Thief</div>
+            <div class="frag-tag">poem ☆ 12/20/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-02">
+        <a class="frag-open" href="/images/dive75_poem.png" data-kind="image" data-title="dive75_poem" data-sub="poem ☆ 12/2/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/dive75_poem.png"
+                 alt="Poem scan: Dive 75"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Dive 75</div>
+            <div class="frag-tag">poem ☆ 12/2/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-03-23">
+        <a class="frag-open" href="/images/icantmakeanypromises_poem.png" data-kind="image" data-title="icantmakeanypromises_poem" data-sub="poem ☆ 3/23/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/icantmakeanypromises_poem.png"
+                 alt="Poem scan: I CAN'T MAKE ANY PROMISES"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">I CAN'T MAKE ANY PROMISES</div>
+            <div class="frag-tag">poem ☆ 3/23/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-12">
+        <a class="frag-open" href="/images/ihavenoidea_poem.png" data-kind="image" data-title="ihavenoidea_poem" data-sub="poem ☆ 1/12/26">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/ihavenoidea_poem.png"
+                 alt="Poem scan: I Have No Idea"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">I Have No Idea</div>
+            <div class="frag-tag">poem ☆ 1/12/26</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-19">
+        <a class="frag-open" href="/images/interpreter_poem.png" data-kind="image" data-title="interpreter_poem" data-sub="poem ☆ 12/19/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/interpreter_poem.png"
+                 alt="Poem scan: Interpreter"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Interpreter</div>
+            <div class="frag-tag">poem ☆ 12/19/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-27">
+        <a class="frag-open" href="/images/KissUponAKayleigh_poem.png" data-kind="image" data-title="KissUponAKayleigh_poem" data-sub="poem ☆ 1/27/26">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/KissUponAKayleigh_poem.png"
+                 alt="Poem scan: Kiss Upon a Kayleigh"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Kiss Upon a Kayleigh</div>
+            <div class="frag-tag">poem ☆ 1/27/26</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-26">
+        <a class="frag-open" href="/images/nakedtrees_poem.png" data-kind="image" data-title="nakedtrees_poem" data-sub="poem ☆ 1/26/26">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/nakedtrees_poem.png"
+                 alt="Poem scan: Naked Trees"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Naked Trees</div>
+            <div class="frag-tag">poem ☆ 1/26/26</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-08-25">
+        <a class="frag-open" href="/images/nofraudstaysintheflowersforever_poem.png" data-kind="image" data-title="nofraudstaysintheflowersforever_poem" data-sub="poem ☆ 8/12/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/nofraudstaysintheflowersforever_poem.png" 
+                 alt="Poem scan: nofraudstaysintheflowersforever_poem"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">No Fraud Stays In the Flowers Forever</div>
+            <div class="frag-tag">poem ☆ 8/12/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-26">
+        <a class="frag-open" href="/images/november8thpart2_poem.png" data-kind="image" data-title="november8thpart2_poem" data-sub="poem ☆ 12/26/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/november8thpart2_poem.png" 
+                 alt="Poem scan: november8thpart2_poem"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">November 8th pt.2</div>
+            <div class="frag-tag">poem ☆ 12/26/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-25">
+        <a class="frag-open" href="/images/OfCupsWedThirst_poem.png" data-kind="image" data-title="OfCupsWedThirst_poem" data-sub="poem ☆ 1/25/26">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/OfCupsWedThirst_poem.png" 
+                 alt="Poem scan: OfCupsWedThirst_poem"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Of Cups We'd Thirst</div>
+            <div class="frag-tag">poem ☆ 1/25/26</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-05">
+        <a class="frag-open" href="/images/sevenlayer_poem.png" data-kind="image" data-title="sevenlayer_poem" data-sub="poem ☆ 12/5/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/sevenlayer_poem.png" 
+                 alt="Poem scan: sevenlayer_poem"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Seven-Layer</div>
+            <div class="frag-tag">poem ☆ 12/5/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-19">
+        <a class="frag-open" href="/images/therecomesajanuarywhenimay_poem.png" data-kind="image" data-title="therecomesajanuarywhenimay_poem" data-sub="poem ☆ 1/19/26">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/therecomesajanuarywhenimay_poem.png" 
+                 alt="Poem scan: therecomesajanuarywhenimay_poem"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">There Comes a January When I May</div>
+            <div class="frag-tag">poem ☆ 1/19/26</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-08-12">
+        <a class="frag-open" href="/images/yellowhyacinth_poem.png" data-kind="image" data-title="yellowhyacinth_poem" data-sub="poem ☆ 8/12/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/yellowhyacinth_poem.png" 
+                 alt="Poem scan: yellowhyacinth_poem"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Yellow Hyacinth</div>
+            <div class="frag-tag">poem ☆ 8/12/25</div>
+          </div>
+        </a>
+      </article>
+
+        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-26">
+        <a class="frag-open" href="/images/truthinarosebud_poem.png" data-kind="image" data-title="truthinarosebud_poem" data-sub="poem ☆ 1/26/26">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/truthinarosebud_poem.png" 
+                 alt="Poem scan: truthinarosebud_poem"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Truth in a Rosebud</div>
+            <div class="frag-tag">poem ☆ 1/26/26</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2023-11-02">
+        <a class="frag-open" href="/images/martyr_poem.png" data-kind="image" data-title="Martyr" data-sub="poem ☆ 11/2/23">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/martyr_poem.png"
+                 alt="Poem scan: martyr"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Martyr</div>
+            <div class="frag-tag">poem ☆ 11/2/23</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-31">
+        <a class="frag-open" href="/images/333_poem.png" data-kind="image" data-title="333" data-sub="poem ☆ 12/31/25">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/333_poem.png"
+                 alt="Poem scan: 333"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">333</div>
+            <div class="frag-tag">poem ☆ 12/31/25</div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-02">
+        <a class="frag-open" href="/images/PHOTOGRAPHY/10225(3).JPG" data-kind="image" data-title="photo" data-sub="photo ☆ NYC">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/PHOTOGRAPHY/10225(3).JPG"
+                 alt="Photo fragment"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Open Field of Hopes and Dreams</div>
+            <div class="frag-tag">Kodak PixPro FZ45 ☆ 10/2/25 </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-03">
+        <a class="frag-open" href="/images/PHOTOGRAPHY/10325.JPG" data-kind="image" data-title="photo" data-sub="photo ☆ Ferry to NYC">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/PHOTOGRAPHY/10325.JPG"
+                 alt="Photo fragment"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Beyond The Sea</div>
+            <div class="frag-tag">Kodak PixPro FZ45 ☆ 10/3/25 </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-05">
+        <a class="frag-open" href="/images/PHOTOGRAPHY/11525.JPG" data-kind="image" data-title="photo" data-sub="photo ☆ My College Campus">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/PHOTOGRAPHY/11525.JPG"
+                 alt="Photo fragment"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Lava Girl</div>
+            <div class="frag-tag">Kodak PixPro FZ45 ☆ 11/5/25 </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-16">
+        <a class="frag-open" href="/images/PHOTOGRAPHY/111625.JPG" data-kind="image" data-title="photo" data-sub="photo ☆ Parking Lot">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/PHOTOGRAPHY/111625.JPG"
+                 alt="Photo fragment"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">There's Still Time</div>
+            <div class="frag-tag">Kodak PixPro FZ45 ☆ 11/16/25 </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-28">
+        <a class="frag-open" href="/images/PHOTOGRAPHY/112825.JPG" data-kind="image" data-title="photo" data-sub="photo ☆ The Feast">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/PHOTOGRAPHY/112825.JPG"
+                 alt="Photo fragment"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Blackpill</div>
+            <div class="frag-tag">Kodak PixPro FZ45 ☆ 11/28/25 </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-02">
+        <a class="frag-open" href="/images/PHOTOGRAPHY/10225.JPG" data-kind="image" data-title="photo" data-sub="photo ☆ Path to ?">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/PHOTOGRAPHY/10225.JPG"
+                 alt="Photo fragment"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">You Will Be Okay</div>
+            <div class="frag-tag">Kodak PixPro FZ45 ☆ 10/2/25 </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-09-25">
+        <a class="frag-open" href="/images/PHOTOGRAPHY/92525(3).JPG" data-kind="image" data-title="photo" data-sub="photo ☆ This is only the beginning">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/PHOTOGRAPHY/92525(3).JPG"
+                 alt="Photo fragment"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">I Can't Put My Finger On It</div>
+            <div class="frag-tag">Kodak PixPro FZ45 ☆ 9/25/25 </div>
+          </div>
+        </a>
+      </article>
+
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-09-25">
+        <a class="frag-open" href="/images/PHOTOGRAPHY/92525(2).JPG" data-kind="image" data-title="photo" data-sub="photo ☆ huh? ">
+          <div class="frag-media">
+            <img loading="lazy"
+                 src="/images/PHOTOGRAPHY/92525(2).JPG"
+                 alt="Photo fragment"
+                 class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Stout</div>
+            <div class="frag-tag">Kodak PixPro FZ45 ☆ 9/25/25 </div>
+          </div>
+        </a>
+      </article>
+      </section>
+      </main>
+
+  <!-- lightbox -->
+  <div class="frag-modal" id="fragModal" aria-hidden="true">
+    <div class="frag-modal-backdrop" data-close="true"></div>
+    <div class="frag-modal-panel" role="dialog" aria-modal="true" aria-label="Fragment viewer">
+      <button class="frag-modal-close" type="button" data-close="true" aria-label="Close">×</button>
+
+      <div class="frag-modal-head">
+        <div class="frag-modal-title" id="modalTitle"></div>
+        <div class="frag-modal-sub" id="modalSub"></div>
+      </div>
+
+      <div class="frag-modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="/js/fragments.js"></script>
+
+      <footer>
+      <p>© 2026 Tim Mills ☆ All rights may or may not be reserved.</p>
+      <img src="/images/STARGORE_BLINK.gif" alt="Fun gif" class="footer-gif">
+      <p><small>Recruiters? <a href="pro.html">View my professional portfolio here</a>.</small></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,703 @@
+/* Helps format for mobile devices */
+
+@media (max-width: 900px) {
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li,
+.tcu-body,
+.tim-muted,
+.blog-post,
+.section-card,
+.tim-card,
+.inspo-card,
+.frag-card,
+.project-card,
+.contact-card {
+  text-align: center !important;
+}
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 8vw, 2.6rem) !important;
+    line-height: 1.1;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.65rem;
+  }
+
+  main,
+  .tim-page,
+  .frag-page,
+  .projects-page,
+  .contact-page,
+  .blog-page {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  section,
+  .section-card,
+  .tim-card,
+  .tcu-card,
+  .blog-post,
+  .project-card,
+  .contact-card,
+  .inspo-card,
+  .frag-card,
+  .tim-kpi {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  img, iframe, video {
+    max-width: 100%;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .tim-hero {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .tim-pfp {
+    width: 170px;
+    height: 170px;
+  }
+
+  .tim-title {
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+  }
+
+  .tim-muted {
+    text-align: center;
+  }
+
+  .tim-badgebar {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .tim-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tim-grid,
+  .tim-row,
+  .tim-split,
+  .inspo-grid,
+  .frag-grid,
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem;
+  }
+
+  .tim-cols-2,
+  .tim-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tim-section-head {
+    text-align: center;
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .tim-section-head h2,
+  .section-title,
+  .tcu-title {
+    font-size: clamp(1.3rem, 6vw, 1.9rem);
+  }
+
+  .tcu-card {
+    text-align: center;
+  }
+
+  .tim-card,
+  .tim-kpi,
+  .inspo-card,
+  .frag-card,
+  .project-card,
+  .blog-post,
+  .section-card,
+  .tcu-card,
+  .contact-card {
+    padding: 0.85rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .tim-card h3,
+  .inspo-card h3,
+  .project-card h3,
+  .blog-post h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .tim-card p,
+  .inspo-card p,
+  .project-card p,
+  .blog-post p,
+  .tcu-body {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+  }
+
+  .inspo-avatar {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 0.5rem;
+  }
+
+  .frag-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .frag-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  button,
+  .chip {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .blog-post {
+    padding: 1rem;
+  }
+
+  .timestamp {
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .footer-gif {
+    max-width: 70px;
+  }
+}
+
+
+/* this part is for smaller phones */
+
+@media (max-width: 480px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  header h1 {
+    font-size: clamp(1.4rem, 9vw, 2.2rem) !important;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.55rem;
+  }
+
+  main {
+    padding: 0.75rem;
+  }
+
+  .tim-hero,
+  .section-card,
+  .tcu-card,
+  .blog-post,
+  .tim-card,
+  .project-card,
+  .contact-card,
+  .inspo-card,
+  .frag-card,
+  .tim-kpi {
+    padding: 0.7rem;
+  }
+
+  .tim-pfp {
+    width: 145px;
+    height: 145px;
+  }
+
+  .tim-title {
+    font-size: 2rem;
+  }
+
+  .social-icons img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .inspo-avatar {
+    width: 95px;
+    height: 95px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .tim-badge,
+  .tim-pill {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 1.25rem 0.75rem;
+  }
+
+  header h1 {
+    font-size: clamp(1.6rem, 7vw, 2.25rem) !important;
+    max-width: 340px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  nav {
+    max-width: 320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem 1rem;
+    justify-items: center;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.35rem;
+    text-align: center;
+  }
+}
+
+
+/* fixes homepage off-center */
+
+@media (max-width: 900px) {
+  .about-summary,
+  .home-summary,
+  .intro-summary,
+  .short-summary,
+  .summary-card {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-summary img,
+  .home-summary img,
+  .intro-summary img,
+  .short-summary img,
+  .summary-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-summary p,
+  .home-summary p,
+  .intro-summary p,
+  .short-summary p,
+  .summary-card p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* for the tim page hero looking stupid */
+
+@media (max-width: 900px) {
+  .tim-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1.25rem !important;
+  }
+
+  .tim-hero > div {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .tim-title {
+    text-align: center !important;
+    font-size: clamp(2rem, 9vw, 3rem) !important;
+    line-height: 1.05;
+    margin: 0 auto 1rem;
+  }
+
+  .tim-hero .tim-muted {
+    text-align: center !important;
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.55;
+  }
+
+  .tim-pfp {
+    order: -1;
+    width: 165px !important;
+    height: 165px !important;
+    margin: 0 auto 1rem !important;
+  }
+
+  .tim-badgebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+
+  /* project status organization */
+
+  .status-grid,
+  .timothy-status-grid,
+  .project-status-grid,
+  .status-cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .status-card,
+  .status-grid > *,
+  .timothy-status-grid > *,
+  .project-status-grid > *,
+  .status-cards > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.9rem !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .status-card p,
+  .status-grid p,
+  .timothy-status-grid p,
+  .project-status-grid p,
+  .status-cards p {
+    max-width: 280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    line-height: 1.45 !important;
+  }
+
+
+  /* index centering */
+
+  .about-summary,
+  .summary-card,
+  .home-summary,
+  .intro-summary,
+  .short-summary {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .about-summary *,
+  .summary-card *,
+  .home-summary *,
+  .intro-summary *,
+  .short-summary * {
+    text-align: center !important;
+  }
+
+  .about-summary p,
+  .summary-card p,
+  .home-summary p,
+  .intro-summary p,
+  .short-summary p {
+    max-width: 300px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+
+  /* index portrait fix */
+
+  .about-summary img,
+  .summary-card img,
+  .home-summary img,
+  .intro-summary img,
+  .short-summary img,
+  .tim-pfp {
+    width: 210px !important;
+    height: 210px !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-summary img,
+  .summary-card img,
+  .home-summary img,
+  .intro-summary img,
+  .short-summary img,
+  .tim-pfp {
+    width: 190px !important;
+    height: 190px !important;
+  }
+}
+
+
+/* force center index */
+
+@media (max-width: 900px) {
+
+
+
+  main section:first-of-type,
+  main section:nth-of-type(1) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  main section:first-of-type img,
+  main section:nth-of-type(1) img {
+    display: block !important;
+    margin: 0 auto 1rem !important;
+  }
+
+  main section:first-of-type p,
+  main section:nth-of-type(1) p {
+    max-width: 320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .tim-pfp {
+    width: 210px !important;
+    height: 210px !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+  }
+}
+
+/* tighten the art page */
+
+@media (max-width: 900px) {
+  .frag-page {
+    padding-top: 1.5rem !important;
+  }
+
+  .frag-page h1,
+  .frag-title {
+    font-size: clamp(1.75rem, 8vw, 2.4rem) !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+    max-width: 360px;
+    margin: 0 auto 0.75rem !important;
+  }
+
+  .frag-page > p,
+  .frag-intro {
+    max-width: 310px;
+    margin: 0 auto 1.25rem !important;
+    text-align: center !important;
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .frag-controls,
+  .filter-row,
+  .sort-row {
+    max-width: 330px;
+    margin: 0 auto 1.5rem !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.55rem !important;
+  }
+
+  .chip,
+  .filter-btn,
+  .sort-btn {
+    width: 100%;
+    font-size: 0.9rem !important;
+    padding: 0.55rem 0.35rem !important;
+    text-align: center !important;
+  }
+
+  .frag-grid {
+    margin-top: 1.25rem !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.6rem !important;
+  }
+
+  .frag-card {
+    padding: 0.4rem !important;
+    border-radius: 14px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .frag-media {
+    padding: 0 !important;
+  }
+
+  .frag-img {
+    width: 100% !important;
+    height: 115px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+  }
+
+  .frag-meta {
+    padding: 0.45rem 0.2rem 0.25rem !important;
+    text-align: center !important;
+  }
+
+  .frag-name {
+    font-size: 0.7rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .frag-tag {
+    font-size: 0.58rem !important;
+    line-height: 1.1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .frag-controls,
+  .filter-row,
+  .sort-row {
+    max-width: 300px;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .chip,
+  .filter-btn,
+  .sort-btn {
+    font-size: 0.82rem !important;
+    padding: 0.5rem 0.25rem !important;
+  }
+
+  .frag-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.7rem !important;
+  }
+
+  .frag-img {
+    height: 145px !important;
+  }
+
+  .frag-name {
+    font-size: 0.75rem !important;
+  }
+
+  .frag-tag {
+    font-size: 0.6rem !important;
+  }
+}
+
+/* art page button improvement */
+
+@media (max-width: 900px) {
+
+  .frag-controls,
+  .filter-row,
+  .sort-row {
+    display: grid !important;
+
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    gap: 0.6rem !important;
+
+    max-width: 280px;
+    margin: 0 auto 1.5rem !important;
+  }
+
+  .chip,
+  .filter-btn,
+  .sort-btn {
+    width: 100%;
+    text-align: center;
+
+    font-size: 0.9rem !important;
+    padding: 0.6rem 0.4rem !important;
+
+    border-radius: 10px;
+  }
+}
+
