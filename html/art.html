@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" id="favicon" type="image/gif" href="../images/STARGORE_BLINK.gif" sizes="32x32">
   <title>☆ THE TIM CINEMATIC UNIVERSE ☆</title>
-
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/01-base.css" />
   <link rel="stylesheet" href="../css/02-utilities.css" />
   <link rel="stylesheet" href="../css/03-animations.css" />
@@ -18,62 +15,99 @@
   <link rel="stylesheet" href="../css/80-fragments.css" />
   <link rel="stylesheet" href="../css/90-mobile.css" />
 </head>
-
 <body>
-  <header>
-    <h1 style="font-size: 3rem;">☆ THE TIM CINEMATIC UNIVERSE ☆</h1>
-    <nav>
+  <header id="top">
+    <h1 class="site-title" style="font-size: 3rem;">
+      <span class="site-title-character site-title-character-left">
+        <img class="character-static" src="../images/STARGORE_BLINK.gif" alt="">
+        <img class="character-moving" src="../images/STARGORE_SCARED.png" alt="">
+      </span>
+      <span class="site-title-text">THE TIM CINEMATIC UNIVERSE</span>
+      <span class="site-title-character site-title-character-right">
+        <img class="character-static" src="../images/STARGORE_BLINK.gif" alt="">
+        <img class="character-moving" src="../images/STARGORE_SCARED.png" alt="">
+      </span>
+    </h1>
+    <nav class="site-nav" aria-label="Primary navigation">
       <a href="../index.html">Home!</a>
       <a href="tim.html">Tim ☆!</a>
-      <a href="projects.html">Projects!</a>
-      <a href="art.html">Art!</a>
+      <div class="nav-dropdown">
+        <button
+          type="button"
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-controls="projectsDropdownMenu"
+        >
+          Projects!
+        </button>
+        <div class="nav-dropdown-menu" id="projectsDropdownMenu">
+          <a href="projects-games.html">Games</a>
+          <a href="projects-writing.html">Writing</a>
+          <a href="projects-music.html">Music</a>
+          <a href="projects-friends.html">Friend-Work</a>
+        </div>
+      </div>
+      <a href="art.html" class="current-page" aria-current="page">Art!</a>
       <a href="blog.html">Blog!</a>
       <a href="resources.html">Resources!</a>
+      <a href="timspiration.html">Timspiration!</a>
       <a href="contact.html">Contact!</a>
-      </nav>
+    </nav>
   </header>
-
   <main class="frag-page">
     <section class="frag-hero">
-      <h1 class="frag-title">TIM AND HIS MISPLACED ARTWORKS ☆</h1>
-      <p class="frag-sub">
-        this page has all the things that I kind of just don't know what to do with.
-      </p>
-
-      <div class="frag-controls">
-        <div class="frag-filters" role="tablist" aria-label="Fragment filters">
-          <button class="chip is-active" data-filter="all" role="tab">All</button>
-          <button class="chip" data-filter="poem" role="tab">Poems</button>
-          <button class="chip" data-filter="photo" role="tab">Photos</button>
-          <button class="chip" data-filter="misc" role="tab">Misc</button>
+      <div class="frag-control-panel">
+        <div class="frag-control-group frag-control-types">
+          <div class="frag-control-label">Type</div>
+          <div class="frag-filters" role="tablist" aria-label="Fragment type filters">
+            <button class="chip is-active" data-filter="all" role="tab">All</button>
+            <button class="chip" data-filter="poem" role="tab">Poems</button>
+            <button class="chip" data-filter="photo" role="tab">Photos</button>
+            <button class="chip" data-filter="music" role="tab">Music</button>
+            <button class="chip" data-filter="misc" role="tab">Misc</button>
+          </div>
         </div>
-
-        <div class="frag-actions">
-          <button class="chip chip-ghost" id="shuffleBtn" type="button" title="Shuffle at em'">
-            Shuffle
-          </button>
-
-          <button class="chip chip-ghost" id="sortNewestBtn" type="button">
-            Newest
-          </button>
-
-          <button class="chip chip-ghost" id="sortOldestBtn" type="button">
-            Oldest
-          </button>
+        <div class="frag-control-group frag-control-creators">
+          <div class="frag-control-label">Creator</div>
+          <div class="frag-creator-filters" role="tablist" aria-label="Fragment creator filters">
+            <button class="chip is-active" data-creator-filter="all" role="tab">All Work</button>
+            <button class="chip" data-creator-filter="tim" role="tab">By Tim ☆</button>
+            <button class="chip" data-creator-filter="kayleigh" role="tab">By Kayleigh</button>
+          </div>
+        </div>
+        <div class="frag-control-group frag-control-actions">
+          <div class="frag-control-label">Order</div>
+          <div class="frag-actions">
+            <button class="chip chip-ghost" id="shuffleBtn" type="button" title="Shuffle at em'">Shuffle</button>
+            <button class="chip chip-ghost" id="sortNewestBtn" type="button">Newest</button>
+            <button class="chip chip-ghost" id="sortOldestBtn" type="button">Oldest</button>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- grid -->
     <section class="frag-grid" id="fragGrid">
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-08-18">
+      <article class="frag-card frag-music" data-type="music" data-creator="tim" data-hidden="false">
+        <div class="frag-media frag-music-media">
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            title="SoundCloud player"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-423537902/chilly-bone&color=%238a63ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+          </iframe>
+        </div>
+        <div class="frag-meta">
+          <div class="frag-name">CATHARSIS (2021 Mix)</div>
+          <div class="frag-tag">music ☆ Tim Mills / EGODEATH</div>
+        </div>
+      </article>
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-08-18" data-creator="tim">
         <a class="frag-open" href="../images/hammer&asylum_poem.png" data-kind="image" data-title="Hammer & Asylum " data-sub="poem ☆ 8/18/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/hammer&asylum_poem.png"
-                 alt="Poem scan: Hammer & Asylum"
-                 class="frag-img">
+            <img loading="lazy" src="../images/hammer&asylum_poem.png" alt="Poem scan: Hammer & Asylum" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Hammer & Asylum</div>
@@ -81,14 +115,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-08-03">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-08-03" data-creator="tim">
         <a class="frag-open" href="../images/Magician_poem.png" data-kind="image" data-title="Magician" data-sub="poem ☆ 8/3/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/Magician_poem.png"
-                 alt="Poem scan: Magician"
-                 class="frag-img">
+            <img loading="lazy" src="../images/Magician_poem.png" alt="Poem scan: Magician" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Magician</div>
@@ -96,14 +126,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-08-01">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-08-01" data-creator="tim">
         <a class="frag-open" href="../images/paradigmtwentyfive_poem.png" data-kind="image" data-title="Paradigm Twenty-Five" data-sub="poem ☆ 8/1/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/paradigmtwentyfive_poem.png"
-                 alt="Poem scan: ParadigmTwentyFive"
-                 class="frag-img">
+            <img loading="lazy" src="../images/paradigmtwentyfive_poem.png" alt="Poem scan: ParadigmTwentyFive" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Paradigm Twenty-Five</div>
@@ -111,14 +137,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-08-04">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-08-04" data-creator="tim">
         <a class="frag-open" href="../images/Rise75_poem.png" data-kind="image" data-title="Rise 75" data-sub="poem ☆ 8/4/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/Rise75_poem.png"
-                 alt="Poem scan: fraudinflowers"
-                 class="frag-img">
+            <img loading="lazy" src="../images/Rise75_poem.png" alt="Poem scan: fraudinflowers" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Rise 75</div>
@@ -126,14 +148,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-05-28">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-05-28" data-creator="tim">
         <a class="frag-open" href="../images/fraudinflowers_poem.png" data-kind="image" data-title="Fraud In Flowers" data-sub="poem ☆ 5/28/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/fraudinflowers_poem.png"
-                 alt="Poem scan: fraudinflowers"
-                 class="frag-img">
+            <img loading="lazy" src="../images/fraudinflowers_poem.png" alt="Poem scan: fraudinflowers" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Fraud In Flowers</div>
@@ -141,14 +159,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-11-28">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-11-28" data-creator="tim">
         <a class="frag-open" href="../images/72_poem.png" data-kind="image" data-title="72" data-sub="poem ☆ 11/28/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/72_poem.png"
-                 alt="Poem scan: 72"
-                 class="frag-img">
+            <img loading="lazy" src="../images/72_poem.png" alt="Poem scan: 72" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">72</div>
@@ -156,14 +170,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-20">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-20" data-creator="tim">
         <a class="frag-open" href="../images/constellationthief_poem.png" data-kind="image" data-title="Constellation-Thief" data-sub="poem ☆ 12/20/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/constellationthief_poem.png"
-                 alt="Poem scan: constellationthief"
-                 class="frag-img">
+            <img loading="lazy" src="../images/constellationthief_poem.png" alt="Poem scan: constellationthief" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Constellation-Thief</div>
@@ -171,14 +181,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-02">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-02" data-creator="tim">
         <a class="frag-open" href="../images/dive75_poem.png" data-kind="image" data-title="Dive 75" data-sub="poem ☆ 12/2/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/dive75_poem.png"
-                 alt="Poem scan: Dive 75"
-                 class="frag-img">
+            <img loading="lazy" src="../images/dive75_poem.png" alt="Poem scan: Dive 75" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Dive 75</div>
@@ -186,14 +192,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-03-23">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-03-23" data-creator="tim">
         <a class="frag-open" href="../images/icantmakeanypromises_poem.png" data-kind="image" data-title="I CAN'T MAKE ANY PROMISES" data-sub="poem ☆ 3/23/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/icantmakeanypromises_poem.png"
-                 alt="Poem scan: I CAN'T MAKE ANY PROMISES"
-                 class="frag-img">
+            <img loading="lazy" src="../images/icantmakeanypromises_poem.png" alt="Poem scan: I CAN'T MAKE ANY PROMISES" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">I CAN'T MAKE ANY PROMISES</div>
@@ -201,14 +203,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-12">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-12" data-creator="tim">
         <a class="frag-open" href="../images/ihavenoidea_poem.png" data-kind="image" data-title="I Have No Idea" data-sub="poem ☆ 1/12/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/ihavenoidea_poem.png"
-                 alt="Poem scan: I Have No Idea"
-                 class="frag-img">
+            <img loading="lazy" src="../images/ihavenoidea_poem.png" alt="Poem scan: I Have No Idea" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">I Have No Idea</div>
@@ -216,14 +214,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-19">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-19" data-creator="tim">
         <a class="frag-open" href="../images/interpreter_poem.png" data-kind="image" data-title="Interpreter" data-sub="poem ☆ 12/19/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/interpreter_poem.png"
-                 alt="Poem scan: Interpreter"
-                 class="frag-img">
+            <img loading="lazy" src="../images/interpreter_poem.png" alt="Poem scan: Interpreter" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Interpreter</div>
@@ -231,14 +225,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-27">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-27" data-creator="tim">
         <a class="frag-open" href="../images/KissUponAKayleigh_poem.png" data-kind="image" data-title="Kiss Upon a Kayleigh" data-sub="poem ☆ 1/27/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/KissUponAKayleigh_poem.png"
-                 alt="Poem scan: Kiss Upon a Kayleigh"
-                 class="frag-img">
+            <img loading="lazy" src="../images/KissUponAKayleigh_poem.png" alt="Poem scan: Kiss Upon a Kayleigh" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Kiss Upon a Kayleigh</div>
@@ -246,14 +236,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-26">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-26" data-creator="tim">
         <a class="frag-open" href="../images/nakedtrees_poem.png" data-kind="image" data-title="Naked Trees" data-sub="poem ☆ 1/26/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/nakedtrees_poem.png"
-                 alt="Poem scan: Naked Trees"
-                 class="frag-img">
+            <img loading="lazy" src="../images/nakedtrees_poem.png" alt="Poem scan: Naked Trees" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Naked Trees</div>
@@ -261,14 +247,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-08-25">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-08-25" data-creator="tim">
         <a class="frag-open" href="../images/nofraudstaysintheflowersforever_poem.png" data-kind="image" data-title="No Fraud Stays In the Flowers Forever" data-sub="poem ☆ 8/12/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/nofraudstaysintheflowersforever_poem.png" 
-                 alt="Poem scan: nofraudstaysintheflowersforever_poem"
-                 class="frag-img">
+            <img loading="lazy" src="../images/nofraudstaysintheflowersforever_poem.png" alt="Poem scan: nofraudstaysintheflowersforever_poem" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">No Fraud Stays In the Flowers Forever</div>
@@ -276,14 +258,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-26">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-26" data-creator="tim">
         <a class="frag-open" href="../images/november8thpart2_poem.png" data-kind="image" data-title="November 8th pt.2" data-sub="poem ☆ 12/26/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/november8thpart2_poem.png" 
-                 alt="Poem scan: november8thpart2_poem"
-                 class="frag-img">
+            <img loading="lazy" src="../images/november8thpart2_poem.png" alt="Poem scan: november8thpart2_poem" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">November 8th pt.2</div>
@@ -291,14 +269,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-25">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-25" data-creator="tim">
         <a class="frag-open" href="../images/OfCupsWedThirst_poem.png" data-kind="image" data-title="Of Cups We'd Thirst" data-sub="poem ☆ 1/25/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/OfCupsWedThirst_poem.png" 
-                 alt="Poem scan: OfCupsWedThirst_poem"
-                 class="frag-img">
+            <img loading="lazy" src="../images/OfCupsWedThirst_poem.png" alt="Poem scan: OfCupsWedThirst_poem" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Of Cups We'd Thirst</div>
@@ -306,14 +280,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-05">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-05" data-creator="tim">
         <a class="frag-open" href="../images/sevenlayer_poem.png" data-kind="image" data-title="Seven-Layer" data-sub="poem ☆ 12/5/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/sevenlayer_poem.png" 
-                 alt="Poem scan: sevenlayer_poem"
-                 class="frag-img">
+            <img loading="lazy" src="../images/sevenlayer_poem.png" alt="Poem scan: sevenlayer_poem" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Seven-Layer</div>
@@ -321,14 +291,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-19">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-19" data-creator="tim">
         <a class="frag-open" href="../images/therecomesajanuarywhenimay_poem.png" data-kind="image" data-title="There Comes a January When I May" data-sub="poem ☆ 1/19/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/therecomesajanuarywhenimay_poem.png" 
-                 alt="Poem scan: therecomesajanuarywhenimay_poem"
-                 class="frag-img">
+            <img loading="lazy" src="../images/therecomesajanuarywhenimay_poem.png" alt="Poem scan: therecomesajanuarywhenimay_poem" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">There Comes a January When I May</div>
@@ -336,14 +302,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-08-12">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-08-12" data-creator="tim">
         <a class="frag-open" href="../images/yellowhyacinth_poem.png" data-kind="image" data-title="Yellow Hyacinth" data-sub="poem ☆ 8/12/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/yellowhyacinth_poem.png" 
-                 alt="Poem scan: yellowhyacinth_poem"
-                 class="frag-img">
+            <img loading="lazy" src="../images/yellowhyacinth_poem.png" alt="Poem scan: yellowhyacinth_poem" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Yellow Hyacinth</div>
@@ -351,14 +313,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-26">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2026-01-26" data-creator="tim">
         <a class="frag-open" href="../images/truthinarosebud_poem.png" data-kind="image" data-title="Truth in a Rosebud" data-sub="poem ☆ 1/26/26">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/truthinarosebud_poem.png" 
-                 alt="Poem scan: truthinarosebud_poem"
-                 class="frag-img">
+            <img loading="lazy" src="../images/truthinarosebud_poem.png" alt="Poem scan: truthinarosebud_poem" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Truth in a Rosebud</div>
@@ -366,14 +324,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2023-11-02">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2023-11-02" data-creator="tim">
         <a class="frag-open" href="../images/martyr_poem.png" data-kind="image" data-title="Martyr" data-sub="poem ☆ 11/2/23">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/martyr_poem.png"
-                 alt="Poem scan: martyr"
-                 class="frag-img">
+            <img loading="lazy" src="../images/martyr_poem.png" alt="Poem scan: martyr" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Martyr</div>
@@ -381,14 +335,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-31">
+      <article class="frag-card frag-paper" data-type="poem" data-hidden="false" data-date="2025-12-31" data-creator="tim">
         <a class="frag-open" href="../images/333_poem.png" data-kind="image" data-title="333" data-sub="poem ☆ 12/31/25">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/333_poem.png"
-                 alt="Poem scan: 333"
-                 class="frag-img">
+            <img loading="lazy" src="../images/333_poem.png" alt="Poem scan: 333" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">333</div>
@@ -396,14 +346,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-02">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-02" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/10225(3).JPG" data-kind="image" data-title="Field of Familiar Energy" data-sub="photo ☆ Taken with your BEST_FRIEND!">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/10225(3).JPG"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/10225(3).JPG" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Field of Familiar Energy</div>
@@ -411,14 +357,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-03">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-03" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/10325.JPG" data-kind="image" data-title="Beyond The Sea" data-sub="photo ☆ Taken on a FERRY!">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/10325.JPG"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/10325.JPG" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Beyond The Sea</div>
@@ -426,14 +368,43 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-05">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-08-18" data-creator="tim">
+        <a class="frag-open" href="../images/PHOTOGRAPHY/garlic.jpg" data-kind="image" data-title="garlic" data-sub="photo ☆ Taken in THE_KITCHEN!">
+          <div class="frag-media">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/garlic.jpg" alt="Photo fragment" class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Garlic!</div>
+            <div class="frag-tag">Samsung Galaxy S22 ☆ 8/18/26 </div>
+          </div>
+        </a>
+      </article>
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-08-18" data-creator="tim">
+        <a class="frag-open" href="../images/PHOTOGRAPHY/Afternoon View.jpg" data-kind="image" data-title="Afternoon View" data-sub="photo ☆ Taken at THE_BEACH!">
+          <div class="frag-media">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/Afternoon View.jpg" alt="Photo fragment" class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Afternoon View</div>
+            <div class="frag-tag">Samsung Galaxy S22 ☆ 8/18/26 </div>
+          </div>
+        </a>
+      </article>
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-08-18" data-creator="tim">
+        <a class="frag-open" href="../images/PHOTOGRAPHY/Cotton Candy.jpg" data-kind="image" data-title="Afternoon View" data-sub="photo ☆ Taken at THE_BEACH!">
+          <div class="frag-media">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/Cotton Candy.jpg" alt="Photo fragment" class="frag-img">
+          </div>
+          <div class="frag-meta">
+            <div class="frag-name">Cotton Candy</div>
+            <div class="frag-tag">Samsung Galaxy S22 ☆ 8/18/26 </div>
+          </div>
+        </a>
+      </article>
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-05" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/11525.JPG" data-kind="image" data-title="Haggstrom" data-sub="photo ☆ Taken at the COLLEGE_CAMPUS">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/11525.JPG"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/11525.JPG" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Haggstrom</div>
@@ -441,14 +412,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-16">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-16" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/111625.JPG" data-kind="image" data-title="Third Sanctuary" data-sub="photo ☆ Taken at the PARKING_LOT">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/111625.JPG"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/111625.JPG" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Third Sanctuary</div>
@@ -456,14 +423,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-28">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-11-28" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/112825.JPG" data-kind="image" data-title="The Divorce Rate in America" data-sub="photo ☆ Taken during THE_FEAST">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/112825.JPG"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/112825.JPG" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">The Divorce Rate in America</div>
@@ -471,14 +434,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-02">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-10-02" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/10225.JPG" data-kind="image" data-title="All Roads Lead To" data-sub="photo ☆ Taken with your BEST_FRIEND">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/10225.JPG"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/10225.JPG" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">All Roads Lead To</div>
@@ -486,14 +445,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-09-25">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-09-25" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/92525(3).JPG" data-kind="image" data-title="Remember" data-sub="photo ☆ Taken somewhere YOU_REMEMBER">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/92525(3).JPG"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/92525(3).JPG" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Remember</div>
@@ -501,14 +456,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-09-25">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2025-09-25" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/92525(2).JPG" data-kind="image" data-title="Tree..." data-sub="photo ☆ Taken somewhere YOU_REMEMBER ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/92525(2).JPG"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/92525(2).JPG" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Tree...</div>
@@ -516,14 +467,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-06-25">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-06-25" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/babyobin.jpg" data-kind="image" data-title="Eet Baby Obin / Wise Obin" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/babyobin.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/babyobin.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Eet Baby Obin / Wise Obin</div>
@@ -531,14 +478,10 @@
           </div>
         </a>
       </article>
-
-        <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-06-24">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-06-24" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/obinonroof.jpg" data-kind="image" data-title="Obin Do Sit On Roof So Good" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/obinonroof.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/obinonroof.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Obin Do Sit On Roof So Good</div>
@@ -546,14 +489,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-06-19">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-06-19" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/kayleighobin.jpg" data-kind="image" data-title="Obin Do Pose For Wi" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/kayleighobin.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/kayleighobin.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Obin Do Pose For Wi</div>
@@ -561,14 +500,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/SpringSunRose.jpg" data-kind="image" data-title="SunRose Spring" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/SpringSunRose.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/SpringSunRose.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">SunRose Spring</div>
@@ -576,14 +511,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/WIZARDS TOWER.jpg" data-kind="image" data-title="Wizards Tower" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/WIZARDS TOWER.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/WIZARDS TOWER.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Wizards Tower</div>
@@ -591,14 +522,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/WorthLiving.jpg" data-kind="image" data-title="Worth Living" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/WorthLiving.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/WorthLiving.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Worth Living</div>
@@ -606,14 +533,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/January Shaped Trees.jpg" data-kind="image" data-title="January Shaped" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/January Shaped Trees.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/January Shaped Trees.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">January Shaped</div>
@@ -621,14 +544,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/Bleeding Heart.jpg" data-kind="image" data-title="Bleeding Heart" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/Bleeding Heart.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/Bleeding Heart.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Bleeding Heart</div>
@@ -636,14 +555,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/Cute Friend That Wi Made.jpg" data-kind="image" data-title="Cute Friend That Wi Made" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/Cute Friend That Wi Made.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/Cute Friend That Wi Made.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Cute Friend That Wi Made</div>
@@ -651,14 +566,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-04-17" data-creator="kayleigh">
         <a class="frag-open" href="../images/PHOTOGRAPHY/A Day Spent In Love.jpg" data-kind="image" data-title="Remember This" data-sub="photo ☆ Taken by kayleigh ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/A Day Spent In Love.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/A Day Spent In Love.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Remember This</div>
@@ -666,14 +577,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-10">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-10" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/obincitysunset.jpg" data-kind="image" data-title="Obin City Sunset" data-sub="photo ☆ Taken at THE_SAME_PLACE ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/obincitysunset.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/obincitysunset.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Obin City Sunset</div>
@@ -681,14 +588,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-10">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-10" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/paradiseplants.jpg" data-kind="image" data-title="Paradise Plants" data-sub="photo ☆ Taken at THE_SAME_PLACE ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/paradiseplants.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/paradiseplants.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Paradise Plants</div>
@@ -696,14 +599,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-10">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-10" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/addyongegs.jpg" data-kind="image" data-title="Addy Ong Egs" data-sub="photo ☆ Taken at THE_SAME_PLACE ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/addyongegs.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/addyongegs.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Addy Ong Egs</div>
@@ -711,14 +610,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-10">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-10" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/fadingmemory.jpg" data-kind="image" data-title="Fading Memory" data-sub="photo ☆ Taken at THE_SAME_PLACE ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/fadingmemory.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/fadingmemory.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Fading Memory</div>
@@ -726,14 +621,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-25">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-25" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/driplet.jpg" data-kind="image" data-title="Driplet" data-sub="photo ☆ Taken at THE_WOODS ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/driplet.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/driplet.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Driplet</div>
@@ -741,14 +632,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-27">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-27" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/loveisaflower.jpg" data-kind="image" data-title="Love is a Flower" data-sub="photo ☆ Taken at THE_HOME_DEPOT ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/loveisaflower.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/loveisaflower.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Love Is A Flower</div>
@@ -756,14 +643,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-27">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-27" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/isthisreal.jpg" data-kind="image" data-title="Too Perfect" data-sub="photo ☆ Taken at THE_HOME_DEPOT ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/isthisreal.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/isthisreal.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Too Perfect</div>
@@ -771,14 +654,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-27">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-27" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/they love each other.jpg" data-kind="image" data-title="They Love Equally" data-sub="photo ☆ Taken at THE_HOME_DEPOT ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/they love each other.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/they love each other.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">They Love Equally</div>
@@ -786,14 +665,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-27">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-05-27" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/hugs.jpg" data-kind="image" data-title="Hugs" data-sub="photo ☆ Taken at THE_HOME_DEPOT ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/hugs.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/hugs.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Hugs</div>
@@ -801,14 +676,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-25">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-25" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/outatsea.jpg" data-kind="image" data-title="Beyond That Sea" data-sub="photo ☆ Taken out at THE_SEA">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/outatsea.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/outatsea.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Beyond That Sea</div>
@@ -816,14 +687,10 @@
           </div>
         </a>
       </article>
-
-      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-24">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-07-24" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/outforatrail.jpg" data-kind="image" data-title="Good Smell, Taller Means" data-sub="photo ☆ Taken out at THE_WOODS">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/outforatrail.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/outforatrail.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">Good Smell, Taller Means</div>
@@ -831,14 +698,10 @@
           </div>
         </a>
       </article>
-
-            <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-01-17">
+      <article class="frag-card frag-photo" data-type="photo" data-hidden="false" data-date="2026-01-17" data-creator="tim">
         <a class="frag-open" href="../images/PHOTOGRAPHY/januaryshope.jpg" data-kind="image" data-title="January's Hope / Beauty Beneath Horizon" data-sub="photo ☆ Taken at YOUR_LOWEST ">
           <div class="frag-media">
-            <img loading="lazy"
-                 src="../images/PHOTOGRAPHY/januaryshope.jpg"
-                 alt="Photo fragment"
-                 class="frag-img">
+            <img loading="lazy" src="../images/PHOTOGRAPHY/januaryshope.jpg" alt="Photo fragment" class="frag-img">
           </div>
           <div class="frag-meta">
             <div class="frag-name">January's Hope / Beauty Beneath Horizon</div>
@@ -846,30 +709,25 @@
           </div>
         </a>
       </article>
-      </section>
-      </main>
-
-  <!-- lightbox -->
+    </section>
+  </main>
   <div class="frag-modal" id="fragModal" aria-hidden="true">
     <div class="frag-modal-backdrop" data-close="true"></div>
     <div class="frag-modal-panel" role="dialog" aria-modal="true" aria-label="Fragment viewer">
       <button class="frag-modal-close" type="button" data-close="true" aria-label="Close">x</button>
-
       <div class="frag-modal-head">
         <div class="frag-modal-title" id="modalTitle"></div>
         <div class="frag-modal-sub" id="modalSub"></div>
       </div>
-
       <div class="frag-modal-body" id="modalBody"></div>
     </div>
   </div>
-
+  <footer>
+    <p>© 2026 Tim Mills ☆ All rights may or may not be reserved.</p>
+    <img src="../images/STARGORE_BLINK.gif" alt="Fun gif" class="footer-gif">
+    <p><small>Recruiters? <a href="pro.html">View my professional portfolio here</a>.</small></p>
+  </footer>
   <script src="/js/fragments.js"></script>
-
-      <footer>
-      <p>© 2026 Tim Mills ☆ All rights may or may not be reserved.</p>
-      <img src="../images/STARGORE_BLINK.gif" alt="Fun gif" class="footer-gif">
-      <p><small>Recruiters? <a href="pro.html">View my professional portfolio here</a>.</small></p>
-    </footer>
+  <script src="../js/site-nav.js"></script>
 </body>
 </html>

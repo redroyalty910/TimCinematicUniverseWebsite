@@ -1,345 +1,371 @@
-<!--This tab will be for resources that I use, that I think could help creators-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" id="favicon" type="image/gif" href="../images/STARGORE_BLINK.gif" sizes="32x32">
   <title>☆ THE TIM CINEMATIC UNIVERSE ☆</title>
-
   <link rel="stylesheet" href="../css/01-base.css">
   <link rel="stylesheet" href="../css/02-utilities.css">
   <link rel="stylesheet" href="../css/03-animations.css">
   <link rel="stylesheet" href="../css/10-layout.css">
   <link rel="stylesheet" href="../css/20-components.css">
   <link rel="stylesheet" href="../css/40-header-footer.css">
+  <link rel="stylesheet" href="../css/55-projects.css">
   <link rel="stylesheet" href="../css/90-mobile.css" />
 </head>
-
 <body>
-  <header>
-    <h1 style="font-size: 3rem;">☆ THE TIM CINEMATIC UNIVERSE ☆</h1>
-    <nav>
+  <header id="top">
+    <h1 class="site-title" style="font-size: 3rem;">
+      <span class="site-title-character site-title-character-left">
+        <img class="character-static" src="../images/STARGORE_BLINK.gif" alt="">
+        <img class="character-moving" src="../images/STARGORE_SCARED.png" alt="">
+      </span>
+      <span class="site-title-text">THE TIM CINEMATIC UNIVERSE</span>
+      <span class="site-title-character site-title-character-right">
+        <img class="character-static" src="../images/STARGORE_BLINK.gif" alt="">
+        <img class="character-moving" src="../images/STARGORE_SCARED.png" alt="">
+      </span>
+    </h1>
+    <nav class="site-nav" aria-label="Primary navigation">
       <a href="../index.html">Home!</a>
       <a href="tim.html">Tim ☆!</a>
-      <a href="projects.html">Projects!</a>
+      <div class="nav-dropdown">
+        <button
+          type="button"
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-controls="projectsDropdownMenu"
+        >
+          Projects!
+        </button>
+        <div class="nav-dropdown-menu" id="projectsDropdownMenu">
+          <a href="projects-games.html">Games</a>
+          <a href="projects-writing.html">Writing</a>
+          <a href="projects-music.html">Music</a>
+          <a href="projects-friends.html">Friend-Work</a>
+        </div>
+      </div>
       <a href="art.html">Art!</a>
       <a href="blog.html">Blog!</a>
-      <a href="resources.html">Resources!</a>
+      <a href="resources.html" class="current-page" aria-current="page">Resources!</a>
+      <a href="timspiration.html">Timspiration!</a>
       <a href="contact.html">Contact!</a>
     </nav>
   </header>
-  <div class="projects-shell">
-
-    <aside class="index-card">
-      <h2 class="toc-title">☆ INDEX ☆</h2>
-
-      <a class="toc-link" href="#resources-intro">Intro</a>
-      <a class="toc-link" href="#resources-game-dev">Game Dev</a>
-      <a class="toc-link" href="#resources-music">Music</a>
-      <a class="toc-link" href="#resources-art-design">Art / Design</a>
-      <a class="toc-link" href="#resources-community">Community / Publishing</a>
-
-      <button class="btn ghost toc-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">Back to Top</button>
-    </aside>
-
-    <main class="projects-main">
-      <div class="page-wrap">
-        <div class="projects-layout">
-
-          <section id="resources-intro" class="section-card">
-            <h2 style="text-align:center">☆ TIM'S RESOURCE BOARD ☆</h2>
-            <p style="text-align:center"><em>Provided on this page is an archive of tools, tutorials, and libraries that may aid creators in various ways.
-                You could make some really seriously cool stuff!
-            </em></p>
-          </section>
-
-          <section id="resources-game-dev" class="section-card">
-            <h2 style="text-align:center">☆ GAME DEV RESOURCES ☆</h2>
-
-            <details class="accordion">
-              <summary class="rainbow"><strong>☆ Engines / Learning ☆</strong></summary>
-              <div class="accordion-content rainbow">
-                <div class="projects-grid">
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Godot Docs / Godot ! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Free</span>
-                        <span class="tag">Godot</span>
-                        <span class="tag">Docs</span>
-                      </div>
-                      <img src="../images/godot png.png" alt="godot" class="project-image">
-                      <p>The official developer documentation for learning all things Godot and GDScript. Godot is my personal favorite
-                        engine at the moment, so of course, I am biased to encourage you to check it out. it's super community friendly.
-                      </p>
-                      <p><a href="https://docs.godotengine.org/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                      <p><a href="https://godotengine.org/download/windows/" target="_blank" rel="noopener">Download Engine -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Unity Learn / Unity ! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Free</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                      </div>
-                      <img src="../images/unity png.png" alt="unity" class="project-image">
-                      <p>Beginner-friendly lessons and pathways for learning Unity, C#, animation, physics, and game systems. While unity is kind of frowned upon these days, it's the
-                        first engine I was taught in, and I think it's a great engine to start with if you have any interest in game development like I did.
-                      </p>
-                      <p><a href="https://learn.unity.com/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                      <p><a href="https://unity.com/" target="_blank" rel="noopener">Download Engine -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Brackeys Guides! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Free</span>
-                        <span class="tag">Tutorials</span>
-                        <span class="tag">Beginner</span>
-                      </div>
-                      <img src="../images/Youtube_logo.png" alt="youtube" class="project-image">
-                      <p>A game development channel with beginner-friendly tutorial videos on Unity, Godot, and programming basics. Highly recommend, incredibly helpful.</p>
-                      <p><a href="https://www.youtube.com/@Brackeys" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-                </div>
+  <main id="resources-intro" class="projects-page-redesign resources-page-redesign">
+    <div class="projects-category-nav-wrap resources-category-nav-wrap" id="resourcesCategoryNav">
+      <nav class="projects-category-nav resources-category-nav" aria-label="Resource categories">
+        <span class="projects-nav-prompt">pick one of the four categories!</span>
+        <div class="projects-category-links resources-category-links">
+          <a href="#resources-game-dev">Game Dev</a>
+          <a href="#resources-music">Music</a>
+          <a href="#resources-art-design">Design</a>
+          <a href="#resources-community">Community</a>
+        </div>
+        <button
+          type="button"
+          class="projects-nav-close resources-nav-close"
+          id="resourcesNavClose"
+          aria-label="Close resource navigation"
+          title="Close resource navigation"
+        >
+          X
+        </button>
+      </nav>
+    </div>
+    <button
+      type="button"
+      class="projects-nav-reopen"
+      id="resourcesNavReopen"
+      aria-label="Open resource navigation"
+    >
+      ☆ RESOURCE NAV ☆
+    </button>
+    <section id="resources-game-dev" class="projects-section resources-section">
+      <div class="projects-section-heading">
+        <h2>☆ GAME DEV RESOURCES ☆</h2>
+        <p class="projects-page-description">
+    I curated this section chock full of resources that you could use to better your skills as a game developer
+  </p>   
+      </div>
+      <div class="resources-subsection">
+        <h3 class="resources-subheading">☆ Engines / Learning ☆</h3>
+        <div class="projects-card-grid resources-card-grid">
+          <article class="projects-showcase-card resource-card">
+            <img alt="godot" class="projects-showcase-image resource-image" src="../images/godot png.png"/>
+            <div class="projects-showcase-content">
+              <h3>Godot Docs / Godot ! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Free</span>
+                <span class="projects-tag">Godot</span>
+                <span class="projects-tag">Docs</span>
               </div>
-            </details>
-
-            <details class="accordion">
-              <summary class="rainbow"><strong>☆ Assets / Sounds / Publishing ☆</strong></summary>
-              <div class="accordion-content rainbow">
-                <div class="projects-grid">
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>itch.io! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Publishing</span>
-                        <span class="tag">Indie</span>
-                        <span class="tag">Game Jams</span>
-                      </div>
-                      <img src="../images/itch.io.png" alt="itch.io" class="project-image">
-                      <p>A popular FREE platform for uploading, sharing, selling, and discovering indie games / game jam projects. Highly recommend starting here if you plan on getting into 
-                        publishing your games.</p>
-                      <p><a href="https://itch.io/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>OpenGameArt! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Assets</span>
-                        <span class="tag">Community</span>
-                        <span class="tag">Game Art</span>
-                      </div>
-                      <img src="../images/opengameart png.png" alt="opengameart" class="project-image">
-                      <p>A community-driven library of sprites, tilesets, music, sound effects, textures, and other assets that you may use.</p>
-                      <p><a href="https://opengameart.org/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Freesound! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Audio</span>
-                        <span class="tag">SFX</span>
-                        <span class="tag">Ambience</span>
-                      </div>
-                      <img src="../images/freesound png.png" alt="freesound" class="project-image">
-                      <p>A FREE sound library where developers can find FREE sounds to use in their creative projects.</p>
-                      <p><a href="https://freesound.org/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-
-                </div>
+              <p>The official developer documentation for learning all things Godot and GDScript. Godot is my personal favorite
+                engine at the moment, so of course, I am biased to encourage you to check it out. it's super community friendly.
+              </p>
+              <p><a href="https://docs.godotengine.org/" rel="noopener" target="_blank">Visit Resource -></a></p>
+              <p><a href="https://godotengine.org/download/windows/" rel="noopener" target="_blank">Download Engine -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="unity" class="projects-showcase-image resource-image" src="../images/unity png.png"/>
+            <div class="projects-showcase-content">
+              <h3>Unity Learn / Unity ! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Free</span>
+                <span class="projects-tag">Unity</span>
+                <span class="projects-tag">C#</span>
               </div>
-            </details>
-          </section>
-
-          <section id="resources-music" class="section-card">
-            <h2 style="text-align:center">☆ MUSIC RESOURCES ☆</h2>
-
-            <details class="accordion">
-              <summary class="rainbow"><strong>☆ Production / Learning ☆</strong></summary>
-              <div class="accordion-content rainbow">
-                <div class="projects-grid">
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>FL Studio Manual / FL Studio ! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Manual</span>
-                        <span class="tag">FL Studio</span>
-                        <span class="tag">Production</span>
-                      </div>
-                      <img src="../images/FLStudio JPEG.jpg" alt="Flstudio" class="project-image">
-                      <p>The official FL Studio manual for learning the DAW and various other little music things. I use FL Studio, hence why I am putting it here.
-                        I feel like even if you don't understand music, you should give it a try. there's a free trial! It's LITERALLY free! if you don't like it, you can just stop using it!
-                      </p>
-                      <p><a href="https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                      <p><a href="https://www.image-line.com/fl-studio/download" target="_blank" rel="noopener">Try FL Studio -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Freesound! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Audio</span>
-                        <span class="tag">Samples</span>
-                        <span class="tag">SFX</span>
-                      </div>
-                      <img src="../images/freesound png.png" alt="freesound" class="project-image">
-                      <p>I'll say it again: A FREE sound library that's great for finding samples and little sounds</p>
-                      <p><a href="https://freesound.org/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-
-                </div>
+              <p>Beginner-friendly lessons and pathways for learning Unity, C#, the animation system, and all that hubbalajazz. While unity is kind of frowned upon these days, it's the
+                first engine I was taught in, and I think it's a nice engine to start with if you have the same interest in game development like I did.
+              </p>
+              <p><a href="https://learn.unity.com/" rel="noopener" target="_blank">Visit Resource -></a></p>
+              <p><a href="https://unity.com/" rel="noopener" target="_blank">Download Engine -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="youtube" class="projects-showcase-image resource-image" src="../images/Youtube_logo.png"/>
+            <div class="projects-showcase-content">
+              <h3>Brackeys Guides! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Free</span>
+                <span class="projects-tag">Tutorials</span>
+                <span class="projects-tag">Beginner</span>
               </div>
-            </details>
-          </section>
-
-          <section id="resources-art-design" class="section-card">
-            <h2 style="text-align:center">☆ ART / DESIGN RESOURCES ☆</h2>
-
-            <details class="accordion">
-              <summary class="rainbow"><strong>☆ Pixel Art / Visual Design ☆</strong></summary>
-              <div class="accordion-content rainbow">
-                <div class="projects-grid">
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Aseprite! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag wip">Paid</span>
-                        <span class="tag">Pixel Art</span>
-                        <span class="tag">Animation</span>
-                      </div>
-                      <img src="../images/aseprite png.png" alt="aseprite" class="project-image">
-                      <p>I literally can not recommend you a greater pixel-art application. At twenty bucks, this is worth every penny.</p>
-                      <p><a href="https://www.aseprite.org/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>DaVinci Resolve Manual / Davinci Resolve! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag wip">FREE</span>
-                        <span class="tag">Video Editing</span>
-                        <span class="tag">Content</span>
-                      </div>
-                      <img src="../images/davinci resolve png.png" alt="davinci resolve" class="project-image">
-                      <p>This is a FREE video editing software and I love it to DEATH, this is actively what I use.</p>
-                      <p><a href="https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Beginners-Guide.pdf?_v=1757574013000" target="_blank" rel="noopener">Visit Resource -></a></p>
-                      <p><a href="https://www.blackmagicdesign.com/event/davinciresolvedownload" target="_blank" rel="noopener">Try DaVinci Resolve -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Lospec! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">FREE</span>
-                        <span class="tag">Palettes</span>
-                        <span class="tag">Pixel Art</span>
-                      </div>
-                      <img src="../images/lospec png.jpg" alt="lospec" class="project-image">
-                      <p>A resource hub for pixel artists with color palettes, tutorials, tools, and inspiration that could help a lot if you're in a bind.</p>
-                      <p><a href="https://lospec.com/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Coolors! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Palette</span>
-                        <span class="tag">Design</span>
-                        <span class="tag">Color</span>
-                      </div>
-                      <img src="../images/coolors png.png" alt="coolors" class="project-image">
-                      <p>An industry friendly color palette generator. color theory is hard, and this? is not so hard.</p>
-                      <p><a href="https://coolors.co/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Photopea! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Browser</span>
-                        <span class="tag">Image Editing</span>
-                        <span class="tag">Design</span>
-                      </div>
-                      <img src="../images/photopea png.png" alt="photopea" class="project-image">
-                      <p>A browser-based image editor that is useful for quick graphics or thumbnails</p>
-                      <p><a href="https://www.photopea.com/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article>
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Pixlr Editor! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag live">Browser</span>
-                        <span class="tag">Image Editing</span>
-                        <span class="tag">Design</span>
-                      </div>
-                      <img src="../images/pixlr png.png" alt="pixlr" class="project-image">
-                      <p>A browser-based image editor that I use more than photopea (I prefer this one)</p>
-                      <p><a href="https://pixlr.com/editor/" target="_blank" rel="noopener">Visit Resource -></a></p>
-                    </div>
-                  </article> 
-
-                </div>
-              </div>
-            </details>
-          </section>
-
-          <section id="resources-community" class="section-card">
-            <h2 style="text-align:center">☆ COMMUNITY ☆</h2>
-
-            <details class="accordion">
-              <summary class="rainbow"><strong>☆ Sharing / Hosting / Community ☆</strong></summary>
-              <div class="accordion-content rainbow">
-                <div class="projects-grid">
-
-                  <article class="project-card rainbow resource-card">
-                    <div class="project-content">
-                      <h3>Tim's Server! ☆</h3>
-                      <div class="tag-row">
-                        <span class="tag coming">Tim</span>
-                        <span class="tag">Discord</span>
-                        <span class="tag">Community</span>
-                      </div>
-                        <img src="../images/tim grade 8.jpg" alt="TIM 71" class="project-image">
-                      <p>My personal community discord! I'm only pushing it so hard because I'm TRYING to build a community and I would LIKE you to be a part of it.</p>
-                      <p><a href="https://discord.gg/JEGeDzk4n7" target="_blank" rel="noopener">Join Server -></a></p>
-                    </div>
-                  </article>
-
+              <p>A game development channel with beginner-friendly tutorial videos on some engines and their programming basics. Highly recommend, incredibly helpful.</p>
+              <p><a href="https://www.youtube.com/@Brackeys" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
         </div>
       </div>
-    </main>
-  </div>
-
+      <div class="resources-subsection">
+        <h3 class="resources-subheading">☆ Assets / Sounds / Publishing ☆</h3>
+        <div class="projects-card-grid resources-card-grid">
+          <article class="projects-showcase-card resource-card">
+            <img alt="itch.io" class="projects-showcase-image resource-image" src="../images/itch.io.png"/>
+            <div class="projects-showcase-content">
+              <h3>itch.io! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Publishing</span>
+                <span class="projects-tag">Indie</span>
+                <span class="projects-tag">Game Jams</span>
+              </div>
+              <p>A popular FREE platform for uploading, sharing, and of course, <b>selling</b>. Highly recommend starting here if you plan on getting into 
+                publishing your games. great resource for finding game jams, and other user-created projects!</p>
+              <p><a href="https://itch.io/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="opengameart" class="projects-showcase-image resource-image" src="../images/opengameart png.png"/>
+            <div class="projects-showcase-content">
+              <h3>OpenGameArt! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Assets</span>
+                <span class="projects-tag">Community</span>
+                <span class="projects-tag">Game Art</span>
+              </div>
+              <p>A community-driven library of sprites, tilesets, music, sound effects, textures, and other assets that you may use.</p>
+              <p><a href="https://opengameart.org/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="freesound" class="projects-showcase-image resource-image" src="../images/freesound png.png"/>
+            <div class="projects-showcase-content">
+              <h3>Freesound! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Audio</span>
+                <span class="projects-tag">SFX</span>
+                <span class="projects-tag">Ambience</span>
+              </div>
+              <p>A FREE sound library where developers can find FREE sounds to use in their creative projects.</p>
+              <p><a href="https://freesound.org/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="resources-music" class="projects-section resources-section">
+      <div class="projects-section-heading">
+        <h2>☆ MUSIC RESOURCES ☆</h2>
+         <p class="projects-page-description">
+    I curated this section chock full of resources that you could use to better your skills as a digital musician
+  </p>   
+      </div>
+      <div class="resources-subsection">
+        <h3 class="resources-subheading">☆ Production / Learning ☆</h3>
+        <div class="projects-card-grid resources-card-grid">
+          <article class="projects-showcase-card resource-card">
+            <img alt="Flstudio" class="projects-showcase-image resource-image" src="../images/FLStudio JPEG.jpg"/>
+            <div class="projects-showcase-content">
+              <h3>FL Studio Manual / FL Studio ! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Manual</span>
+                <span class="projects-tag">FL Studio</span>
+                <span class="projects-tag">Production</span>
+              </div>
+              <p>The official FL Studio manual for learning the DAW and various other little music things. I use FL Studio, hence why I am putting it here.
+                I feel like even if you don't understand music, you should give it a try. there's a free trial! It's LITERALLY free! if you don't like it, you can just stop using it!
+              </p>
+              <p><a href="https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/" rel="noopener" target="_blank">Visit Resource -></a></p>
+              <p><a href="https://www.image-line.com/fl-studio/download" rel="noopener" target="_blank">Try FL Studio -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="freesound" class="projects-showcase-image resource-image" src="../images/freesound png.png"/>
+            <div class="projects-showcase-content">
+              <h3>Freesound! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Audio</span>
+                <span class="projects-tag">Samples</span>
+                <span class="projects-tag">SFX</span>
+              </div>
+              <p>I'll say it again: A FREE sound library that's great for finding samples and little sounds</p>
+              <p><a href="https://freesound.org/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="resources-art-design" class="projects-section resources-section">
+      <div class="projects-section-heading">
+        <h2>☆ ART / DESIGN RESOURCES ☆</h2>
+                <p class="projects-page-description">
+    I curated this section chock full of resources that you could use to better your assets (I am a terrible artist!)
+  </p>   
+      </div>
+      <div class="resources-subsection">
+        <h3 class="resources-subheading">☆ Pixel Art / Visual Design ☆</h3>
+        <div class="projects-card-grid resources-card-grid">
+          <article class="projects-showcase-card resource-card">
+            <img alt="aseprite" class="projects-showcase-image resource-image" src="../images/aseprite png.png"/>
+            <div class="projects-showcase-content">
+              <h3>Aseprite! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-wip">Paid</span>
+                <span class="projects-tag">Pixel Art</span>
+                <span class="projects-tag">Animation</span>
+              </div>
+              <p>I literally can not recommend you a greater pixel-art application. At twenty bucks, this is worth every penny.</p>
+              <p><a href="https://www.aseprite.org/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="davinci resolve" class="projects-showcase-image resource-image" src="../images/davinci resolve png.png"/>
+            <div class="projects-showcase-content">
+              <h3>DaVinci Resolve Manual / Davinci Resolve! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-wip">FREE</span>
+                <span class="projects-tag">Video Editing</span>
+                <span class="projects-tag">Content</span>
+              </div>
+              <p>This is a FREE video editing software and I love it to DEATH, this is actively what I use.</p>
+              <p><a href="https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Beginners-Guide.pdf?_v=1757574013000" rel="noopener" target="_blank">Visit Resource -></a></p>
+              <p><a href="https://www.blackmagicdesign.com/event/davinciresolvedownload" rel="noopener" target="_blank">Try DaVinci Resolve -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="lospec" class="projects-showcase-image resource-image" src="../images/lospec png.jpg"/>
+            <div class="projects-showcase-content">
+              <h3>Lospec! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">FREE</span>
+                <span class="projects-tag">Palettes</span>
+                <span class="projects-tag">Pixel Art</span>
+              </div>
+              <p>A resource hub for pixel artists with color palettes, tutorials, tools, and inspiration that could help a lot if you're in a bind.</p>
+              <p><a href="https://lospec.com/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="coolors" class="projects-showcase-image resource-image" src="../images/coolors png.png"/>
+            <div class="projects-showcase-content">
+              <h3>Coolors! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Palette</span>
+                <span class="projects-tag">Design</span>
+                <span class="projects-tag">Color</span>
+              </div>
+              <p>An industry friendly color palette generator. color theory is hard, and this? is not so hard.</p>
+              <p><a href="https://coolors.co/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="photopea" class="projects-showcase-image resource-image" src="../images/photopea png.png"/>
+            <div class="projects-showcase-content">
+              <h3>Photopea! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Browser</span>
+                <span class="projects-tag">Image Editing</span>
+                <span class="projects-tag">Design</span>
+              </div>
+              <p>A browser-based image editor that is useful for quick graphics or thumbnails</p>
+              <p><a href="https://www.photopea.com/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+          <article class="projects-showcase-card resource-card">
+            <img alt="pixlr" class="projects-showcase-image resource-image" src="../images/pixlr png.png"/>
+            <div class="projects-showcase-content">
+              <h3>Pixlr Editor! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-live">Browser</span>
+                <span class="projects-tag">Image Editing</span>
+                <span class="projects-tag">Design</span>
+              </div>
+              <p>A browser-based image editor that I use more than photopea (I prefer this one)</p>
+              <p><a href="https://pixlr.com/editor/" rel="noopener" target="_blank">Visit Resource -></a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="resources-community" class="projects-section resources-section">
+      <div class="projects-section-heading">
+        <h2>☆ COMMUNITY ☆</h2>
+        <p class="projects-page-description">
+    This section will help to better unite us as creators
+  </p>   
+      </div>
+      <div class="resources-subsection">
+        <h3 class="resources-subheading">☆ Sharing / Hosting / Community ☆</h3>
+        <div class="projects-card-grid resources-card-grid">
+          <article class="projects-showcase-card resource-card">
+            <img alt="TIM 71" class="projects-showcase-image resource-image" src="../images/tim grade 8.jpg"/>
+            <div class="projects-showcase-content">
+              <h3>Tim's Server! ☆</h3>
+              <div class="projects-tag-row">
+                <span class="projects-tag projects-tag-coming">Tim</span>
+                <span class="projects-tag">Discord</span>
+                <span class="projects-tag">Community</span>
+              </div>
+              <p>My personal community discord! I'm only pushing it so hard because I'm TRYING to build a community and I would LIKE you to be a part of it.</p>
+              <p><a href="https://discord.gg/JEGeDzk4n7" rel="noopener" target="_blank">Join Server -></a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <a class="projects-back-top resources-back-top" href="#resources-intro">Back to Top</a>
+  </main>
   <footer class="tim-footer">
     <p>© 2026 Tim Mills ☆ All rights may or may not be reserved.</p>
     <img src="../images/STARGORE_BLINK.gif" alt="Fun gif" class="footer-gif">
     <p><small>Recruiters? <a href="pro.html">View my professional portfolio here</a>.</small></p>
   </footer>
+  <script>
+    const resourcesCategoryNav = document.getElementById("resourcesCategoryNav");
+    const resourcesNavClose = document.getElementById("resourcesNavClose");
+    const resourcesNavReopen = document.getElementById("resourcesNavReopen");
+    resourcesNavClose.addEventListener("click", () => {
+      resourcesCategoryNav.classList.add("projects-nav-hidden");
+      resourcesNavReopen.classList.add("projects-nav-reopen-visible");
+    });
+    resourcesNavReopen.addEventListener("click", () => {
+      resourcesCategoryNav.classList.remove("projects-nav-hidden");
+      resourcesNavReopen.classList.remove("projects-nav-reopen-visible");
+    });
+  </script>
+  <script src="../js/site-nav.js"></script>
 </body>
 </html>

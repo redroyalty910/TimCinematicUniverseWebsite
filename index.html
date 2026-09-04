@@ -12,7 +12,6 @@
   <link rel="icon" id="favicon" type="image/gif" href="images/STARGORE_BLINK.gif" sizes="32x32">
   <title>☆ THE TIM CINEMATIC UNIVERSE ☆</title>
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/01-base.css" />
   <link rel="stylesheet" href="css/02-utilities.css" />
   <link rel="stylesheet" href="css/03-animations.css" />
@@ -23,141 +22,229 @@
 </head>
 
 <body>
-  <header>
-    <h1 style="font-size: 3rem;">☆ THE TIM CINEMATIC UNIVERSE ☆</h1>
-    <nav>
-      <a href="index.html">Home!</a>
+  <header id="top">
+    <h1 class="site-title" style="font-size: 3rem;">
+      <span class="site-title-character site-title-character-left">
+        <img class="character-static" src="images/STARGORE_BLINK.gif" alt="">
+        <img class="character-moving" src="images/STARGORE_SCARED.png" alt="">
+      </span>
+
+      <span class="site-title-text">THE TIM CINEMATIC UNIVERSE</span>
+
+      <span class="site-title-character site-title-character-right">
+        <img class="character-static" src="images/STARGORE_BLINK.gif" alt="">
+        <img class="character-moving" src="images/STARGORE_SCARED.png" alt="">
+      </span>
+    </h1>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="current-page" aria-current="page">Home!</a>
       <a href="html/tim.html">Tim ☆!</a>
-      <a href="html/projects.html">Projects!</a>
+
+      <div class="nav-dropdown">
+        <button
+          type="button"
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-controls="projectsDropdownMenu"
+        >
+          Projects!
+        </button>
+
+        <div class="nav-dropdown-menu" id="projectsDropdownMenu">
+          <a href="html/projects-games.html">Games</a>
+          <a href="html/projects-writing.html">Writing</a>
+          <a href="html/projects-music.html">Music</a>
+          <a href="html/projects-friends.html">Friend-Work</a>
+        </div>
+      </div>
+
       <a href="html/art.html">Art!</a>
       <a href="html/blog.html">Blog!</a>
       <a href="html/resources.html">Resources!</a>
+      <a href="html/timspiration.html">Timspiration!</a>
       <a href="html/contact.html">Contact!</a>
     </nav>
   </header>
 
   <main>
-    <!-- all about tim -->
-    <section id="about" class="with-image">
-      <div class="about-container">
-        <img src="images/tim_portraitzoom.png" alt="Tim Mills headshot" class="profile-pic" />
-        <div class="bio-and-links">
-          <h2>☆ SHORT SUMMARY ☆</h2>
-          <p>Hello! (WAVE BACK AT YOUR SCREEN), I'm Tim Mills ☆ - a 23-year-old creator of several things that you can find all around this website! </p>
-          <p>I want to make as many people feel through my art as I can :)</p>
-          <a href="html/tim.html">For a deeper dive into what I do, click here!</a>
-          <p><strong>LET ALL THAT YOU DO BE DONE IN LOVE !</strong></p>
-          <p>Follow my socials and see what I'm up to! :)</p>
+    <section id="about" class="home-intro">
+      <div class="home-portrait-column">
+        <a href="https://www.youtube.com/watch?v=yBbr9n9JnZg" target="_blank" rel="noopener" class="profile-link">
+          <span class="profile-frame">
+            <img src="images/tim_portraitzoom.png" alt="Tim Mills headshot" class="profile-pic" />
+            <span class="profile-hover-text">☆ click for his anthem ☆</span>
+          </span>
+        </a>
+      </div>
 
-          <div class="social-icons">
-            <a href="https://x.com/EGOD3ATHH" target="_blank" rel="noopener">
-              <img src="images/Twitter Logo PNG.png" alt="Twitter">
-            </a>
-            <a href="https://www.instagram.com/timcinematicuniverse" target="_blank" rel="noopener">
-              <img src="images/Instagram Logo PNG.png" alt="instagram">
-            </a>
-            <a href="https://www.twitch.tv/redroyalty" target="_blank" rel="noopener">
-              <img src="images/Twitch Logo PNG.png" alt="Twitch">
-            </a>
-            <a href="https://www.youtube.com/@redroyalty910" target="_blank" rel="noopener">
-              <img src="images/Youtube_logo.png" alt="YouTube (Main)">
-            </a>
-            <a href="https://www.youtube.com/@redroyaltyunedited" target="_blank" rel="noopener">
-              <img src="images/youtube two.png" alt="YouTube (2nd Channel)">
-            </a>
-            <a href="https://www.tiktok.com/@redroyalty910" target="_blank" rel="noopener">
-              <img src="images/TikTok PNG.png" alt="TikTok">
-            </a>
-            <a href="https://discord.gg/JEGeDzk4n7" target="_blank" rel="noopener">
-              <img src="images/discord-logo-png-transparent.png" alt="Discord">
-            </a>
-            <a href="https://soundcloud.com/timmy-9102002910" target="_blank" rel="noopener">
-              <img src="images/soundcloud.png" alt="SoundCloud">
-            </a>
-            <a href="https://github.com/redroyalty910" target="_blank" rel="noopener">
-              <img src="images/github.png" alt="GitHub">
-            </a>
-            <a href="https://open.spotify.com/user/8qosn06ye9l8vhi802scxavfb?si=3344c778ad6a421c" target="_blank" rel="noopener">
-              <img src="images/Spotify PNG.png" alt="Spotify">
-            </a>
-            <a href="https://www.albumoftheyear.org/user/redroyalty/" target="_blank" rel="noopener">
-              <img src="images/albumoftheyear png.png" alt="albumoftheyear">
-            </a>
-            <a href="https://backloggd.com/u/redroyalty/" target="_blank" rel="noopener">
-              <img src="images/backloggd.jpg" alt="Spotify">
-            </a>
-            <a href="https://redroyalty.itch.io/" target="_blank" rel="noopener">
-              <img src="images/itch.io.png" alt="Itch.io">
-            </a>
-            <a href="https://untappd.com/user/redroyalty" target="_blank" rel="noopener">
-              <img src="images/untappd png.png" alt="untappd"> 
-            </a>
-            <a href="https://www.chess.com/member/redroyalty910" target="_blank" rel="noopener">
-              <img src="images/chess png.png" alt="chess">
-            </a>
-          </div>
+      <div class="bio-and-links">
+        <h2>☆ SHORT SUMMARY ☆</h2>
+
+        <p>
+          Hello! (WAVE BACK AT YOUR SCREEN), I'm Tim Mills ☆ - a silly 23-year-old creator of several things that you can find all around this website! Though I primarily describe myself as
+          a "game-developer with sauce," I am creatively versatile.
+          Check out the site, see what ya find, and if you like what you see, I'd love to hear your thoughts about it! :)
+        </p>
+
+        <p>I want to make people feel something. Like, something that they can talk about in interesting detail. I love the idea of it in my head, like, 
+          the idea of creating a world for other ears, eyes, and minds, and then those same senses sensing to something that I made for them. I have much to share in such a short amount of time, 
+          and I'd love it if you tagged along with me for the journey.
+        </p>
+
+        <a href="html/tim.html">For a deeper dive into ME, click here!</a>
+
+        <p><strong>LET ALL THAT YOU DO BE DONE IN LOVE !</strong></p>
+
+        <p>Follow my socials and see what I'm up to! :)</p>
+
+        <div class="social-icons">
+          <a href="https://x.com/EGOD3ATHH" target="_blank" rel="noopener">
+            <img src="images/Twitter Logo PNG.png" alt="Twitter">
+          </a>
+
+          <a href="https://www.instagram.com/timcinematicuniverse" target="_blank" rel="noopener">
+            <img src="images/Instagram Logo PNG.png" alt="instagram">
+          </a>
+
+          <a href="https://www.twitch.tv/redroyalty" target="_blank" rel="noopener">
+            <img src="images/Twitch Logo PNG.png" alt="Twitch">
+          </a>
+
+          <a href="https://www.youtube.com/@redroyalty910" target="_blank" rel="noopener">
+            <img src="images/Youtube_logo.png" alt="YouTube (Main)">
+          </a>
+
+          <a href="https://www.youtube.com/@redroyaltyunedited" target="_blank" rel="noopener">
+            <img src="images/youtube two.png" alt="YouTube Unedited">
+          </a>
+
+          <a href="https://www.tiktok.com/@redroyalty910" target="_blank" rel="noopener">
+            <img src="images/TikTok PNG.png" alt="TikTok">
+          </a>
+
+          <a href="https://discord.gg/JEGeDzk4n7" target="_blank" rel="noopener">
+            <img src="images/discord-logo-png-transparent.png" alt="Discord">
+          </a>
+
+          <a href="https://soundcloud.com/timmy-9102002910" target="_blank" rel="noopener">
+            <img src="images/soundcloud.png" alt="SoundCloud">
+          </a>
+
+          <a href="https://github.com/redroyalty910" target="_blank" rel="noopener">
+            <img src="images/github.png" alt="GitHub">
+          </a>
+
+          <a href="https://open.spotify.com/user/8qosn06ye9l8vhi802scxavfb?si=3344c778ad6a421c" target="_blank" rel="noopener">
+            <img src="images/Spotify PNG.png" alt="Spotify">
+          </a>
+
+          <a href="https://www.albumoftheyear.org/user/redroyalty/" target="_blank" rel="noopener">
+            <img src="images/albumoftheyear png.png" alt="albumoftheyear">
+          </a>
+
+          <a href="https://backloggd.com/u/redroyalty/" target="_blank" rel="noopener">
+            <img src="images/backloggd.jpg" alt="Backloggd">
+          </a>
+
+          <a href="https://redroyalty.itch.io/" target="_blank" rel="noopener">
+            <img src="images/itch.io.png" alt="Itch.io">
+          </a>
+
+          <a href="https://untappd.com/user/redroyalty" target="_blank" rel="noopener">
+            <img src="images/untappd png.png" alt="untappd">
+          </a>
+
+          <a href="https://www.chess.com/member/redroyalty910" target="_blank" rel="noopener">
+            <img src="images/chess png.png" alt="chess">
+          </a>
         </div>
+      </div>
+
+      <div class="home-creative-stack">
+        <a href="html/projects-games.html" class="explore-card">
+          <h3>☆ Games ☆</h3>
+          <p>For a very unserious person, I take game development deathly serious. I don't play about my artistic vision.</p>
+          <span class="explore-cta">PEEP MY GAMES -></span>
+        </a>
+
+        <a href="html/projects-music.html" class="explore-card">
+          <h3>☆ Music ☆</h3>
+          <p>I normally release music as Tim Mills ☆, but when I'm producing beats, I'm EGODEATH.</p>
+          <span class="explore-cta">BUMP MY TUNES -></span>
+        </a>
+
+        <a href="html/art.html" class="explore-card">
+          <h3>☆ Writing ☆</h3>
+          <p>I've been reduced to a poet; much much much less of a fictionista in recent years...</p>
+          <span class="explore-cta">READ MY POETRY -></span>
+        </a>
       </div>
     </section>
 
-    <section class="home-explore">
-  <h2>☆ TIM MILLS ☆</h2> 
-
-  <div class="home-explore-grid">
-
-    <a href="html/projects.html#projects-games" class="explore-card">
-      <h3>☆ Games ☆</h3>
-      <p>
-        I take game development pretty seriously because my art is a reflection
-        of myself; which isn't so serious... but I swear that this is maybe a little different.
-      </p>
-      <span class="explore-cta">GAMES -></span> 
-    </a>
-
-    <a href="html/projects.html#projects-music-art" class="explore-card">
-      <h3>☆ Music ☆</h3>
-      <p>
-        I release music as Tim Mills ☆, but usually go by the alias "EGODEATH" if im just producing. it's complicated.
-      </p>
-      <span class="explore-cta">MUSIC -></span>
-    </a>
-
-    <a href="html/art.html" class="explore-card">
-      <h3>☆ Writing ☆</h3>
-      <p>
-        I write poetry, stories, and other weird-things and I'm kinda proud of it sometimes.
-      </p>
-      <span class="explore-cta">READ -></span>
-    </a>
-
-  </div>
-</section>
-
-
-    <!-- Discord call to action :) -->
     <section id="discord-cta" class="center">
-      <h2>☆ JOIN MY "COMMUNITY BUILDING" DISCORD AND SAY HELLO! ☆</h2>
-      <p>
-        <a href="https://discord.gg/JEGeDzk4n7" target="_blank" class="discord-link rainbow-text" rel="noopener">
-          ☆ Click this yummy rainbow text to join my discord server ! ☆
-        </a>
-      </p>
-      <a href="https://discord.gg/JEGeDzk4n7" target="_blank" rel="noopener">
-        <img src="images/tim_w_text.jpg" alt="Join the Discord" class="about-image" />
-      </a>
-      <p>
-        <a href="https://discord.gg/JEGeDzk4n7" target="_blank" class="discord-link rainbow-text" rel="noopener">
-          ☆ Click this yummy rainbow text to join my discord server ! ☆
-        </a>
-      </p>
-    </section>
+      <div class="discord-desktop-card">
+        <h2>☆ TIM'S "COMMUNITY BUILDING" DISCORD ☆</h2>
 
-<!--Consider if the professional portfolio should be so easily accessible...-->
-    <footer class="tim-footer">
-      <p>© 2026 Tim Mills ☆ All rights may or may not be reserved.</p>
-      <img src="images/STARGORE_BLINK.gif" alt="Fun gif" class="footer-gif">
-      <p><small>Recruiters? <a href="html/pro.html">View my professional portfolio here</a>.</small></p>
-    </footer>
+        <p class="discord-description">
+          I want to network with you. yes, you. Um, all of you out there, yes. The discord server is a major work in progress, and if you could help me organize it somehow, I would appreciate it.
+          Oh, and, hey, you don't need to talk or be active or anything. pull up, chill, have a laugh, whatever you do, I'd just like to see ya :)
+        </p>
+
+        <a
+          href="https://discord.gg/JEGeDzk4n7"
+          target="_blank"
+          class="discord-image-link"
+          rel="noopener"
+        >
+          <div class="discord-photo-wrap">
+            <img
+              src="images/tim_w_text.jpg"
+              alt="Join the Discord"
+              class="about-image"
+            />
+
+            <span class="discord-photo-message">
+              ☆ click the boy to join the server! or he... he will do a serious die! you don't want that, do you!? ☆
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <div class="discord-mobile-original">
+        <h2>☆ JOIN MY "COMMUNITY BUILDING" DISCORD AND SAY HELLO! ☆</h2>
+
+        <p class="discord-description">
+          I want to network with you. yes, you. Um, all of you out there, yes. The discord server is a major work in progress, and if you could help me organize it somehow, I would appreciate it.
+          Oh, and, hey, you don't need to talk or be active or anything. pull up, chill, have a laugh, whatever you do, I'd just like to see ya :)
+        </p>
+
+        <p>
+          <a
+            href="https://discord.gg/JEGeDzk4n7"
+            target="_blank"
+            class="discord-link rainbow-text"
+            rel="noopener"
+          >
+            ☆ Click this yummy rainbow text to join my discord server ! ☆
+          </a>
+        </p>
+
+        <a href="https://discord.gg/JEGeDzk4n7" target="_blank" rel="noopener">
+          <img src="images/tim_w_text.jpg" alt="Join the Discord" class="about-image" />
+        </a>
+      </div>
+    </section>
   </main>
+
+  <footer class="tim-footer">
+    <p>© 2026 Tim Mills ☆ All rights may or may not be reserved.</p>
+    <img src="images/STARGORE_BLINK.gif" alt="Fun gif" class="footer-gif">
+    <p><small>Recruiters? <a href="html/pro.html">View my professional portfolio here</a>.</small></p>
+  </footer>
+
+  <script src="js/site-nav.js"></script>
 </body>
+
 </html>

@@ -1,236 +1,247 @@
-<!--this is a more intimate "about me" for people who, you know, want to get me more intimately
-it is totally optional and I made it because it would be fun. that is all. it may be subject to change
-in the final version of this website but I have no idea yet. There are so many things that I don't know.
-What, do you know? I don't even know. -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" id="favicon" type="image/gif" href="../images/STARGORE_BLINK.gif" sizes="32x32">
   <title>☆ THE TIM CINEMATIC UNIVERSE ☆</title>
-
-  <!--stylesheets that I used-->
-<link rel="stylesheet" href="../css/01-base.css">
-<link rel="stylesheet" href="../css/02-utilities.css">
-<link rel="stylesheet" href="../css/03-animations.css">
-<link rel="stylesheet" href="../css/10-layout.css">
-<link rel="stylesheet" href="../css/20-components.css">
-<link rel="stylesheet" href="../css/40-header-footer.css">
-<link rel="stylesheet" href="../css/50-tim-page.css">
-<link rel="stylesheet" href="../css/60-contact.css">
-<link rel="stylesheet" href="../css/90-mobile.css" />
-
+  <link rel="stylesheet" href="../css/01-base.css">
+  <link rel="stylesheet" href="../css/02-utilities.css">
+  <link rel="stylesheet" href="../css/03-animations.css">
+  <link rel="stylesheet" href="../css/10-layout.css">
+  <link rel="stylesheet" href="../css/20-components.css">
+  <link rel="stylesheet" href="../css/40-header-footer.css">
+  <link rel="stylesheet" href="../css/50-tim-page.css">
+  <link rel="stylesheet" href="../css/60-contact.css">
+  <link rel="stylesheet" href="../css/90-mobile.css" />
 </head>
 <body>
-  <header>
-    <h1 style="font-size: 3rem;">☆ THE TIM CINEMATIC UNIVERSE ☆</h1>
-    <nav>
+  <header id="top">
+    <h1 class="site-title" style="font-size: 3rem;">
+      <span class="site-title-character site-title-character-left">
+        <img class="character-static" src="../images/STARGORE_BLINK.gif" alt="">
+        <img class="character-moving" src="../images/STARGORE_SCARED.png" alt="">
+      </span>
+      <span class="site-title-text">THE TIM CINEMATIC UNIVERSE</span>
+      <span class="site-title-character site-title-character-right">
+        <img class="character-static" src="../images/STARGORE_BLINK.gif" alt="">
+        <img class="character-moving" src="../images/STARGORE_SCARED.png" alt="">
+      </span>
+    </h1>
+    <nav class="site-nav" aria-label="Primary navigation">
       <a href="../index.html">Home!</a>
-      <a href="tim.html">Tim ☆!</a>
-      <a href="projects.html">Projects!</a>
+      <a href="tim.html" class="current-page" aria-current="page">Tim ☆!</a>
+      <div class="nav-dropdown">
+        <button
+          type="button"
+          class="nav-dropdown-toggle"
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-controls="projectsDropdownMenu"
+        >
+          Projects!
+        </button>
+        <div class="nav-dropdown-menu" id="projectsDropdownMenu">
+          <a href="projects-games.html">Games</a>
+          <a href="projects-writing.html">Writing</a>
+          <a href="projects-music.html">Music</a>
+          <a href="projects-friends.html">Friend-Work</a>
+        </div>
+      </div>
       <a href="art.html">Art!</a>
       <a href="blog.html">Blog!</a>
       <a href="resources.html">Resources!</a>
+      <a href="timspiration.html">Timspiration!</a>
       <a href="contact.html">Contact!</a>
     </nav>
   </header>
-<p></p>
   <main class="tim-page">
-
-    <!--  hero -->
-    <section class="tim-hero">
-      <img class="tim-pfp" src="../images/tim_portrait2.jpg" alt="Tim Mills" />
-      <div>
-        <h1 class="tim-title"> ☆ TIM MILLS ☆</h1>
-        <p class="tim-muted">
-          <strong>Storyteller • Game Dev • Musician • Writer / Poet • Programmer • Voice Actor • Hooper • Video Editor</strong> <br />
-          I shape the world around me; heart and stars on my sleeve. As a creator who deeply values quality projects; I am far-beyond <u>deathly serious</u> in regards to my artistic vision.
-          With that in mind, I truly do apologize if I take a while to produce the most of my results... My own perfectionism will 100% be the death of me!
-        </p>
-
-        <div class="tim-badgebar">
-          <span class="tim-badge">NYC Based</span>
-          <span class="tim-badge">Sexual Style</span>
-          <span class="tim-badge">Art Appreciator</span>
-          <span class="tim-badge">Tree Hugger</span>
-          <span class="tim-badge">Hope Enthusiast</span>
-          <span class="tim-badge">☆.</span>
+    <div class="tim-top-layout">
+      <section class="tim-hero">
+<a
+  class="tim-pfp-link"
+  href="https://www.youtube.com/watch?v=yBbr9n9JnZg"
+  target="_blank"
+  rel="noopener"
+>
+  <span class="tim-pfp-frame">
+    <img class="tim-pfp" src="../images/tim_portrait2.jpg" alt="Tim Mills" />
+    <span class="tim-pfp-hover-text">☆ click for his anthem ☆</span>
+  </span>
+</a>
+        <div>
+          <h1 class="tim-title">
+            <span class="tim-title-star tim-title-star-left">☆</span>
+            <span class="tim-title-text">TIM MILLS</span>
+            <span class="tim-title-star tim-title-star-right">☆</span>
+          </h1>
+          <p class="tim-muted">
+            <strong>Storyteller • Game Dev • Musician • Writer / Poet • Programmer • Hooper • Video Editor</strong>
+            <br />
+            I shape the world around me; heart and stars on my sleeve. As a creator who deeply values quality projects; I am far-beyond <u>deathly serious</u> about my artistic vision.
+            With that in mind, I truly do apologize if I take a while to produce the most of my results... My own perfectionism will 100% be the death of me!
+          </p>
+          <div class="tim-badgebar">
+            <span class="tim-badge">NYC Based</span>
+            <span class="tim-badge">Sexual Style</span>
+            <span class="tim-badge">Art Appreciator</span>
+            <span class="tim-badge">Tree Hugger</span>
+            <span class="tim-badge">Hope Enthusiast</span>
+            <span class="tim-badge">☆.</span>
+          </div>
+          <div class="social-icons">
+            <a href="https://x.com/EGOD3ATHH" target="_blank" rel="noopener">
+              <img src="../images/Twitter Logo PNG.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/timcinematicuniverse" target="_blank" rel="noopener">
+              <img src="../images/Instagram Logo PNG.png" alt="Instagram">
+            </a>
+            <a href="https://www.twitch.tv/redroyalty" target="_blank" rel="noopener">
+              <img src="../images/Twitch Logo PNG.png" alt="Twitch">
+            </a>
+            <a href="https://www.youtube.com/@redroyalty910" target="_blank" rel="noopener">
+              <img src="../images/Youtube_logo.png" alt="YouTube">
+            </a>
+            <a href="https://www.youtube.com/@redroyaltyunedited" target="_blank" rel="noopener">
+              <img src="../images/youtube two.png" alt="YouTube Unedited">
+            </a>
+            <a href="https://www.tiktok.com/@redroyalty910" target="_blank" rel="noopener">
+              <img src="../images/TikTok PNG.png" alt="TikTok">
+            </a>
+            <a href="https://discord.gg/JEGeDzk4n7" target="_blank" rel="noopener">
+              <img src="../images/discord-logo-png-transparent.png" alt="Discord">
+            </a>
+            <a href="https://soundcloud.com/timmy-9102002910" target="_blank" rel="noopener">
+              <img src="../images/soundcloud.png" alt="SoundCloud">
+            </a>
+            <a href="https://github.com/redroyalty910" target="_blank" rel="noopener">
+              <img src="../images/github.png" alt="GitHub">
+            </a>
+            <a href="https://redroyalty.itch.io/" target="_blank" rel="noopener">
+              <img src="../images/itch.io.png" alt="Itch.io">
+            </a>
+          </div>
         </div>
-
-<div class="social-icons">
-<a href="https://x.com/EGOD3ATHH" target="_blank">
-<img src="../images/Twitter Logo PNG.png" alt="Twitter">
-</a>
-<a href="https://www.instagram.com/timcinematicuniverse" target="_blank" rel="noopener">
-<img src="../images/Instagram Logo PNG.png" alt="instagram">
-</a>
-<a href="https://www.twitch.tv/redroyalty" target="_blank">
-<img src="../images/Twitch Logo PNG.png" alt="Twitch">
-</a>
-<a href="https://www.youtube.com/@redroyalty910" target="_blank">
-<img src="../images/Youtube_logo.png" alt="YouTube">
-</a>
-<a href="https://www.youtube.com/@redroyaltyunedited" target="_blank">
-<img src="../images/youtube two.png" alt="2nd Channel">
-</a>
-<a href="https://www.tiktok.com/@redroyalty910" target="_blank" rel="noopener">
-<img src="../images/TikTok PNG.png" alt="TikTok">
-</a>
-<a href="https://discord.gg/JEGeDzk4n7" target="_blank">
-<img src="../images/discord-logo-png-transparent.png" alt="Discord">
-</a>
-</a>
-<a href="https://soundcloud.com/timmy-9102002910" target="_blank">
-<img src="../images/soundcloud.png" alt="SoundCloud">
-</a>
-  <a href="https://github.com/redroyalty910" target="_blank">
-    <img src="../images/github.png" alt="GitHub">
-  </a>
-    <a href="https://redroyalty.itch.io/" target="_blank">
-    <img src="../images/itch.io.png" alt="Itch.Io">
-  </a>
-</div>
-      </div>
-    </section>
-
-    <!-- tim badges -->
-    <div class="tim-section-head">
-      <span class="tim-star"></span><h2>☆ Professional Skillset ☆</h2>
+      </section>
+      <aside class="tim-skill-sidebar">
+        <div class="tim-section-head">
+          <h2>☆ Professional Skillset ☆</h2>
+        </div>
+        <div class="tim-skill-list">
+          <div class="tim-kpi">
+            <b>Programmer</b>
+            <span class="tim-muted">C++ • C# • Python • JavaScript • HTML • CSS • SQL</span>
+          </div>
+          <div class="tim-kpi">
+            <b>Operating Systems</b>
+            <span class="tim-muted">Windows • macOS • Linux</span>
+          </div>
+          <div class="tim-kpi">
+            <b>Game Dev</b>
+            <span class="tim-muted">Unity • Godot</span>
+          </div>
+          <div class="tim-kpi">
+            <b>Musician</b>
+            <span class="tim-muted">FL Studio</span>
+          </div>
+          <div class="tim-kpi">
+            <b>Microsoft Office</b>
+            <span class="tim-muted">Word • Excel • PowerPoint</span>
+          </div>
+          <div class="tim-kpi">
+            <b>Media Manipulator</b>
+            <span class="tim-muted">DaVinci Resolve • Adobe Photoshop</span>
+          </div>
+          <div class="tim-kpi">
+            <b>Getting Buckets Since</b>
+            <span class="tim-muted">2014</span>
+          </div>
+        </div>
+      </aside>
     </div>
-    <section class="tim-row">
-      <div class="tim-kpi"><b>Programmer</b><span class="tim-muted">C++ • C# • Python • JavaScript • HTML • CSS • SQL</span></div>
-      <div class="tim-kpi"><b>Operating Systems</b><span class="tim-muted">Windows • macOS • Linux</span></div>
-      <div class="tim-kpi"><b>Game Dev</b><span class="tim-muted">Unity • Godot</span></div>
-      <div class="tim-kpi"><b>Musician</b><span class="tim-muted">FL Studio</span></div>
-      <div class="tim-kpi"><b>Microsoft Office</b><span class="tim-muted">Word • Excel • PowerPoint</span></div>
-      <div class="tim-kpi"><b>Media Manipulator</b><span class="tim-muted">DaVinci Resolve • Adobe Photoshop</span></div>
-      <div class="tim-kpi"><b>Getting Buckets Since</b><span class="tim-muted">2014</span></div>
-    </section>
-
-    <!-- what i make -->
-    <div class="tim-section-head" >
-      <span class="tim-star"></span><h2>☆ Tim Will Feed You ☆</h2>
-    </div>
-    <section class="tim-grid tim-cols-3">
-      <article class="tim-card">
-        <h3>☆ GAMES ☆</h3>
-        <p class="tim-muted">I like all kinds of games, so I draw in from a wide-range variety of inspirations. I particularly love turn based RPGs, they're fun and I spent a lot of my developmental years
-        playing them. When it's all said and done, I think I'd like to be remembered for a cool game like that. Not in an 'Earhtbound-inspired RPG about depression' kind of way, but more of a 'Colorful
-        RPG by Tim Mills that is sexy' kind of way.</p>
-
-        <p><a href="projects.html#games">See game projects -></a></p>
-      </article>
-
-      <article class="tim-card">
-        <h3>☆ MUSIC ☆</h3>
-        <p class="tim-muted">I like to make music in my spare time, it's a lot of fun. Currently, I use FL Studio, and I am quite fond of putting weird sounds into weird patterns to make weird songs... 
-          I like the idea of being the guy that does his own soundtrack or makes his own beats, and this desire reflects off of all of my favorite idols .</p>
-        <p><a href="#music">Jump to a track</a></p>
-      </article>
-
-      <article class="tim-card">
-        <h3>☆ WRITING ☆</h3>
-        <p class="tim-muted">I have been a passionate storyteller since I learned how to write. I started my journey at the age of six,
-           writing elaborate fan-fiction about Mario and Luigi during my class time. Since my early years, I now write mostly poetry instead. Even if a lot of my work could make very little sense (sometimes 
-           even illegible), all of it is intentional and I claim it as a part of my "style." </p>
-        <p><a href="art.html">Visit the art page -></a></p>
-      </article>
-    </section>
-
-        <!-- the music thing -->
-    <div id="music" class="tim-section-head">
-      <span class="tim-star"></span><h2>☆ Listen In ☆</h2>
-    </div>
-    <section class="tim-card">
-      <div class="tim-embed">
-<iframe
-  width="100%"
-  height="166"
-  scrolling="no"
-  frameborder="no"
-  allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-423537902/chilly-bone&color=%238a63ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-</iframe>
-      </div>
-    </section>
-
-    <!-- Q&A in cards -->
-    <div class="tim-section-head">
-      <span class="tim-star"></span><h2>☆ Tim-Specific Mini Q&amp;A ☆</h2>
-    </div>
-    <section class="tim-grid tim-cols-2">
-      <div class="tim-card">
-        <h3>Can we COLLAB?</h3>
-        <p class="tim-muted">I am open to collaborations of ANY freakin' degree (So long as enough details are initially provided in your proposal) and for more details... <a href="contact.html">click here</a> ! Also relevant note: I REALLY LIKE ARTISTS! </p>
-      </div>
-      <div class="tim-card">
-        <h3>What do you want people to feel?</h3>
-        <p class="tim-muted">I think I want to give people a sense of hope.</p>
-      </div>
+    <div class="tim-main-column">
+      <div class="tim-lower-layout">
+        <section class="tim-lower-section">
+          <div class="tim-section-head">
+            <h2>☆ Tim-Specific Mini Q&A ☆</h2>
+          </div>
+          <div class="tim-qa-grid">
             <div class="tim-card">
-        <h3>When do we get to hear more about your... anything? </h3>
-        <p class="tim-muted">I'll try to drop meaningful updates on the <a href="blog.html">BLOG</a> page as often as I feel that I can!</p>
+              <h3>Can we COLLAB?</h3>
+              <p class="tim-muted">
+                I am open to collaborations! of any kind! include details, and for my contact... <a href="contact.html">click here</a>! Oh, and I REALLY LIKE ARTISTS! LIKE, THE ONES THAT DRAW!
+              </p>
+            </div>
+            <div class="tim-card">
+              <h3>What do you want people to feel?</h3>
+              <p class="tim-muted">
+                I think I want to give people a sense of hope.
+              </p>
+            </div>
+            <div class="tim-card">
+              <h3>When do we get to hear more about your... anything?</h3>
+              <p class="tim-muted">
+                I'll try to drop meaningful updates on the <a href="blog.html">BLOG</a> page at least once a month!
+              </p>
+            </div>
+            <div class="tim-card">
+              <h3>What are your plans here going forward?</h3>
+              <p class="tim-muted">
+                I would like to graduate college first before we discuss anything crazy. I graduate during the spring of 2027 as of right now.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="tim-lower-section">
+          <div class="tim-section-head">
+            <h2>☆ Likes and Dislikes ☆</h2>
+          </div>
+          <div class="tim-likes-grid">
+            <div class="tim-card">
+              <h3>Things I Like!</h3>
+              <div>
+                <span class="tim-pill">Flowers</span>
+                <span class="tim-pill">Bees</span>
+                <span class="tim-pill">American robin</span>
+                <span class="tim-pill">Miller High Life</span>
+                <span class="tim-pill">Nice Clothes</span>
+                <span class="tim-pill">Clean grammar</span>
+                <span class="tim-pill">Basketball</span>
+                <span class="tim-pill">Spaghetti</span>
+                <span class="tim-pill">Her</span>
+                <span class="tim-pill">Spring</span>
+                <span class="tim-pill">Long Walks / Bike Rides</span>
+                <span class="tim-pill">Vodka Redbull</span>
+                <span class="tim-pill">Corona</span>
+                <span class="tim-pill">Mozzarella</span>
+                <span class="tim-pill">Spicy Food</span>
+              </div>
+            </div>
+            <div class="tim-card">
+              <h3>Things I do NOT Like!</h3>
+              <div>
+                <span class="tim-pill">Bland UI</span>
+                <span class="tim-pill">Tuna Fish</span>
+                <span class="tim-pill">Grilled Hot-dogs</span>
+                <span class="tim-pill">Eggs (Sometimes)</span>
+                <span class="tim-pill">Wrong "Your / You're"</span>
+                <span class="tim-pill">Snow</span>
+                <span class="tim-pill">Espresso Martini</span>
+                <span class="tim-pill">Sushi as a Concept</span>
+                <span class="tim-pill">Cold Winters</span>
+                <span class="tim-pill">Paper Mario changing their successful formula after Thousand Year Door</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-                  <div class="tim-card">
-        <h3>What are your plans here going forward?</h3>
-        <p class="tim-muted">I would like to graduate college first, and then? full steam ahead. There are far too many stars in the sky to
-           remain silent forever, I think.</p>
-      </div>
-    </section>
-
-      <!-- likes and dislikes section -->
-    <div class="tim-section-head">
-      <span class="tim-star"></span><h2>☆ Likes and Dislikes ☆</h2>
     </div>
-    <section class="tim-split">
-      <div class="tim-card">
-        <h3>Things I Like! </h3>
-        <div>
-          <span class="tim-pill">Flowers</span>
-          <span class="tim-pill">Bees</span>
-          <span class="tim-pill">American robin</span>
-          <span class="tim-pill">Miller High Life</span>
-          <span class="tim-pill">Nice Clothes</span>
-          <span class="tim-pill">Clean grammar</span>
-          <span class="tim-pill">Basketball</span>
-          <span class="tim-pill">Spaghetti</span>
-          <span class="tim-pill">Her</span>
-          <span class="tim-pill">Spring</span>
-          <span class="tim-pill">Long Walks / Bike Rides</span>
-          <span class="tim-pill">Vodka Redbull</span>
-          <span class="tim-pill">Corona</span>
-          <span class="tim-pill">Mozzarella</span>
-          <span class="tim-pill">Spicy Food</span>
-        </div>
-      </div>
-      <div class="tim-card">
-        <h3>Things I do NOT Like! </h3>
-        <div>
-          <span class="tim-pill">Bland UI</span>
-          <span class="tim-pill">Tuna Fish</span>
-          <span class="tim-pill">Grilled Hot-dogs</span>
-          <span class="tim-pill">Eggs (Sometimes)</span>
-          <span class="tim-pill">Wrong "Your / You're"</span>
-          <span class="tim-pill">Snow</span>
-          <span class="tim-pill">Espresso Martini</span>
-          <span class="tim-pill">Sushi as a Concept</span>
-          <span class="tim-pill">Cold Winters</span>
-          <span class="tim-pill">Paper Mario changing their successful formula after Thousand Year Door</span>
-        </div>
-      </div>
-    </section>
-
-
-<!--Consider if the professional portfolio should be so easily accessible...-->
     <footer>
       <p>© 2026 Tim Mills ☆ All rights may or may not be reserved.</p>
       <img src="../images/STARGORE_BLINK.gif" alt="Fun gif" class="footer-gif">
       <p><small>Recruiters? <a href="pro.html">View my professional portfolio here</a>.</small></p>
     </footer>
-
   </main>
+  <script src="../js/site-nav.js"></script>
 </body>
 </html>

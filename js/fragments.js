@@ -1,7 +1,14 @@
 (function () {
   const grid = document.getElementById("fragGrid");
   const cards = Array.from(grid.querySelectorAll(".frag-card"));
-  const chips = Array.from(document.querySelectorAll(".chip[data-filter]"));
+
+  const typeChips = Array.from(
+    document.querySelectorAll(".chip[data-filter]")
+  );
+
+  const creatorChips = Array.from(
+    document.querySelectorAll(".chip[data-creator-filter]")
+  );
 
   const modal = document.getElementById("fragModal");
   const modalTitle = document.getElementById("modalTitle");
@@ -13,25 +20,81 @@
   const sortNewestBtn = document.getElementById("sortNewestBtn");
   const sortOldestBtn = document.getElementById("sortOldestBtn");
 
-  let activeFilter = "all";
+  const orderChips = [
+    shuffleBtn,
+    sortNewestBtn,
+    sortOldestBtn
+  ].filter(Boolean);
 
-  function setActiveChip(filter) {
-    chips.forEach(c => c.classList.toggle("is-active", c.dataset.filter === filter));
+  let activeType = "all";
+  let activeCreator = "all";
+
+  function setActiveTypeChip(filter) {
+    typeChips.forEach(chip => {
+      chip.classList.toggle(
+        "is-active",
+        chip.dataset.filter === filter
+      );
+    });
   }
 
-  function applyFilter(filter) {
-    activeFilter = filter;
-    setActiveChip(filter);
-
-    cards.forEach(card => {
-      const type = card.dataset.type;
-      const isHidden = card.dataset.hidden === "true";
-      const shouldShowByType = filter === "all" || type === filter;
-
-      if (isHidden) return;
-
-      card.style.display = shouldShowByType ? "" : "none";
+  function setActiveCreatorChip(creator) {
+    creatorChips.forEach(chip => {
+      chip.classList.toggle(
+        "is-active",
+        chip.dataset.creatorFilter === creator
+      );
     });
+  }
+
+  function setActiveOrderChip(activeButton) {
+    orderChips.forEach(chip => {
+      chip.classList.toggle(
+        "is-active",
+        chip === activeButton
+      );
+    });
+  }
+
+  function cardMatchesFilters(card) {
+    const type = card.dataset.type || "";
+    const creator = card.dataset.creator || "";
+    const isHidden = card.dataset.hidden === "true";
+
+    if (isHidden) {
+      return false;
+    }
+
+    const typeMatches =
+      activeType === "all" ||
+      type === activeType;
+
+    const creatorMatches =
+      activeCreator === "all" ||
+      creator === activeCreator;
+
+    return typeMatches && creatorMatches;
+  }
+
+  function applyFilters() {
+    cards.forEach(card => {
+      card.style.display =
+        cardMatchesFilters(card)
+          ? ""
+          : "none";
+    });
+  }
+
+  function setTypeFilter(filter) {
+    activeType = filter;
+    setActiveTypeChip(filter);
+    applyFilters();
+  }
+
+  function setCreatorFilter(creator) {
+    activeCreator = creator;
+    setActiveCreatorChip(creator);
+    applyFilters();
   }
 
   function getVisibleCards() {
@@ -45,19 +108,43 @@
     const visible = getVisibleCards();
 
     for (let i = visible.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [visible[i], visible[j]] = [visible[j], visible[i]];
+      const j = Math.floor(
+        Math.random() * (i + 1)
+      );
+
+      [visible[i], visible[j]] =
+        [visible[j], visible[i]];
     }
 
-    visible.forEach(card => grid.appendChild(card));
+    visible.forEach(card => {
+      grid.appendChild(card);
+    });
+  }
+
+  function getCardDate(card) {
+    const rawDate = card.dataset.date;
+
+    if (!rawDate) {
+      return new Date(0);
+    }
+
+    const parsedDate = new Date(
+      `${rawDate}T00:00:00`
+    );
+
+    if (Number.isNaN(parsedDate.getTime())) {
+      return new Date(0);
+    }
+
+    return parsedDate;
   }
 
   function sortVisible(order) {
     const visible = getVisibleCards();
 
     visible.sort((a, b) => {
-      const dateA = new Date(a.dataset.date || "1900-01-01");
-      const dateB = new Date(b.dataset.date || "1900-01-01");
+      const dateA = getCardDate(a);
+      const dateB = getCardDate(b);
 
       if (order === "newest") {
         return dateB - dateA;
@@ -66,92 +153,193 @@
       return dateA - dateB;
     });
 
-    visible.forEach(card => grid.appendChild(card));
+    visible.forEach(card => {
+      grid.appendChild(card);
+    });
   }
 
   function revealOneHidden() {
-    const hidden = cards.filter(c => c.dataset.hidden === "true");
+    const hidden = cards.filter(
+      card => card.dataset.hidden === "true"
+    );
 
     if (!hidden.length) {
       if (revealBtn) {
-        revealBtn.textContent = "Nothing left to reveal";
+        revealBtn.textContent =
+          "Nothing left to reveal";
+
         revealBtn.disabled = true;
       }
+
       return;
     }
 
-    const pick = hidden[Math.floor(Math.random() * hidden.length)];
-    pick.dataset.hidden = "false";
-    pick.classList.remove("is-hidden");
+    const randomIndex = Math.floor(
+      Math.random() * hidden.length
+    );
 
-    const type = pick.dataset.type;
-    const shouldShow = activeFilter === "all" || activeFilter === type;
-    pick.style.display = shouldShow ? "" : "none";
+    const pickedCard = hidden[randomIndex];
+
+    pickedCard.dataset.hidden = "false";
+    pickedCard.classList.remove("is-hidden");
+
+    applyFilters();
   }
 
   function openModal(payload) {
-    modalTitle.textContent = payload.title || "";
-    modalSub.textContent = payload.sub || "";
+    modalTitle.textContent =
+      payload.title || "";
+
+    modalSub.textContent =
+      payload.sub || "";
+
     modalBody.innerHTML = "";
 
     if (payload.kind === "image") {
       const img = document.createElement("img");
+
       img.src = payload.href;
       img.alt = payload.title || "Fragment";
+
       modalBody.appendChild(img);
     } else {
       const div = document.createElement("div");
+
       div.className = "modal-text";
       div.textContent = payload.text || "";
+
       modalBody.appendChild(div);
     }
 
     modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
+
+    modal.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
     document.body.style.overflow = "hidden";
   }
 
   function closeModal() {
     modal.classList.remove("is-open");
-    modal.setAttribute("aria-hidden", "true");
+
+    modal.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
     document.body.style.overflow = "";
   }
 
-  chips.forEach(chip => {
-    chip.addEventListener("click", () => applyFilter(chip.dataset.filter));
+  typeChips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      setTypeFilter(
+        chip.dataset.filter
+      );
+    });
   });
 
-  grid.addEventListener("click", (e) => {
-    const opener = e.target.closest(".frag-open");
-    if (!opener) return;
+  creatorChips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      setCreatorFilter(
+        chip.dataset.creatorFilter
+      );
+    });
+  });
+
+  grid.addEventListener("click", event => {
+    const opener =
+      event.target.closest(".frag-open");
+
+    if (!opener) {
+      return;
+    }
 
     const kind = opener.dataset.kind;
     const title = opener.dataset.title;
     const sub = opener.dataset.sub;
 
     if (kind === "image") {
-      if (opener.tagName.toLowerCase() === "a") e.preventDefault();
-      openModal({ kind, title, sub, href: opener.getAttribute("href") });
-    } else {
-      openModal({ kind, title, sub, text: opener.dataset.text });
+      if (
+        opener.tagName.toLowerCase() === "a"
+      ) {
+        event.preventDefault();
+      }
+
+      openModal({
+        kind,
+        title,
+        sub,
+        href: opener.getAttribute("href")
+      });
+
+      return;
+    }
+
+    if (kind === "text") {
+      openModal({
+        kind,
+        title,
+        sub,
+        text: opener.dataset.text
+      });
     }
   });
 
-  modal.addEventListener("click", (e) => {
-    if (e.target.dataset.close === "true") closeModal();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("is-open")) {
+  modal.addEventListener("click", event => {
+    if (
+      event.target.dataset.close === "true"
+    ) {
       closeModal();
     }
   });
 
-  shuffleBtn?.addEventListener("click", shuffleVisible);
-  revealBtn?.addEventListener("click", revealOneHidden);
-  sortNewestBtn?.addEventListener("click", () => sortVisible("newest"));
-  sortOldestBtn?.addEventListener("click", () => sortVisible("oldest"));
+  document.addEventListener(
+    "keydown",
+    event => {
+      if (
+        event.key === "Escape" &&
+        modal.classList.contains("is-open")
+      ) {
+        closeModal();
+      }
+    }
+  );
 
-  applyFilter("all");
+  shuffleBtn?.addEventListener(
+    "click",
+    () => {
+      shuffleVisible();
+      setActiveOrderChip(shuffleBtn);
+    }
+  );
+
+  revealBtn?.addEventListener(
+    "click",
+    revealOneHidden
+  );
+
+  sortNewestBtn?.addEventListener(
+    "click",
+    () => {
+      sortVisible("newest");
+      setActiveOrderChip(sortNewestBtn);
+    }
+  );
+
+  sortOldestBtn?.addEventListener(
+    "click",
+    () => {
+      sortVisible("oldest");
+      setActiveOrderChip(sortOldestBtn);
+    }
+  );
+
+  setActiveTypeChip("all");
+  setActiveCreatorChip("all");
+  setActiveOrderChip(shuffleBtn);
+
+  applyFilters();
   shuffleVisible();
 })();
