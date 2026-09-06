@@ -5,7 +5,7 @@
   }
 
   body {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   main,
@@ -40,14 +40,14 @@
   }
 
   p {
-    font-size: 0.95rem;
-    line-height: 1.55;
+    font-size: 0.92rem;
+    line-height: 1.5;
   }
 
   button,
   .chip {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.7rem;
+    font-size: 0.82rem;
+    padding: 0.48rem 0.68rem;
   }
 
   footer {
@@ -77,8 +77,8 @@
     width: 100%;
     max-width: 100%;
     margin: 0 auto 0.85rem;
-    font-size: clamp(1.15rem, 4.8vw, 1.55rem) !important;
-    line-height: 1.1;
+    font-size: clamp(1.05rem, 4.5vw, 1.4rem) !important;
+    line-height: 1.08;
     letter-spacing: 0;
     white-space: nowrap;
   }
@@ -124,7 +124,7 @@
     color: var(--color-text-dark);
     -webkit-text-fill-color: var(--color-text-dark);
     font-family: var(--font-ui);
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 800;
     line-height: 1;
     text-align: center;
@@ -249,6 +249,21 @@
     align-self: start;
   }
 
+  .projects-page-heading h1,
+  .frag-title,
+  .timspiration-title {
+    font-size: clamp(2rem, 9vw, 2.8rem) !important;
+    line-height: 1.05;
+  }
+
+  .projects-section-heading h2,
+  .tim-section-head h2,
+  .section-title,
+  .tcu-title {
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
+    line-height: 1.15;
+  }
+
   .tim-grid,
   .tim-row,
   .tim-split,
@@ -277,18 +292,21 @@
   .tim-card h3,
   .inspo-card h3,
   .project-card h3,
-  .blog-post h3 {
+  .blog-post h3,
+  .projects-showcase-content h3 {
     margin-bottom: 0.4rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 
   .tim-card p,
   .inspo-card p,
   .project-card p,
+  .projects-showcase-content p,
   .tcu-body {
     margin-bottom: 0.6rem;
-    font-size: 0.92rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.48;
   }
 
   .blog-post {
@@ -297,7 +315,7 @@
 
   .blog-post > p {
     margin: 0;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     line-height: 1.45;
   }
 
@@ -308,7 +326,7 @@
   }
 
   .blog-post > p + p {
-    margin-top: 0.7rem;
+    margin-top: 0.65rem;
   }
 
   .blog-post > p:empty {
@@ -331,7 +349,7 @@
 
   .tim-title {
     margin: 0 auto 1rem;
-    font-size: clamp(2rem, 9vw, 3rem) !important;
+    font-size: clamp(1.9rem, 8vw, 2.6rem) !important;
     line-height: 1.05;
     text-align: center;
   }
@@ -341,7 +359,8 @@
     max-width: 430px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.55;
+    font-size: 0.9rem;
+    line-height: 1.5;
     text-align: center;
   }
 
@@ -364,21 +383,17 @@
     gap: 0.5rem;
   }
 
-  .tim-badge {
+  .tim-badge,
+  .tim-pill,
+  .projects-tag {
     padding: 0.35rem 0.5rem;
-    font-size: 0.75rem;
+    font-size: 0.68rem;
   }
 
   .tim-section-head {
     margin-top: 1.3rem;
     margin-bottom: 0.6rem;
     text-align: center;
-  }
-
-  .tim-section-head h2,
-  .section-title,
-  .tcu-title {
-    font-size: clamp(1.3rem, 6vw, 1.9rem);
   }
 
   .about-summary,
@@ -402,6 +417,8 @@
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
     text-align: center;
   }
 
@@ -482,7 +499,7 @@
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.28);
     color: #fff;
-    font-size: 0.82rem;
+    font-size: 0.76rem;
     font-weight: 700;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
     opacity: 0;
@@ -519,12 +536,16 @@
     max-width: 430px;
     margin-left: auto;
     margin-right: auto;
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
+    line-height: 1.15;
   }
 
   .home-intro .bio-and-links p {
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
     text-align: center;
   }
 
@@ -569,9 +590,20 @@
     text-align: left;
   }
 
-  .home-creative-stack .explore-card h3,
-  .home-creative-stack .explore-card p,
+  .home-creative-stack .explore-card h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .home-creative-stack .explore-card p {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    text-align: left;
+  }
+
   .home-creative-stack .explore-card span {
+    font-size: 0.8rem;
     text-align: left;
   }
 
@@ -623,7 +655,7 @@
     margin: 0 auto 0.85rem;
     padding-bottom: 0.75rem;
     border-bottom: 2px solid var(--color-border);
-    font-size: clamp(1.35rem, 6vw, 1.8rem);
+    font-size: clamp(1.25rem, 5.5vw, 1.65rem);
     line-height: 1.15;
   }
 
@@ -631,8 +663,8 @@
     max-width: 430px;
     margin: 0.75rem auto 1rem;
     color: var(--color-text-soft);
-    font-size: 0.9rem;
-    line-height: 1.55;
+    font-size: 0.88rem;
+    line-height: 1.48;
     text-align: center;
   }
 
@@ -643,7 +675,7 @@
 
   .discord-mobile-original .discord-link {
     display: inline-block;
-    font-size: 0.9rem;
+    font-size: 0.86rem;
     line-height: 1.35;
   }
 
@@ -700,6 +732,7 @@
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.88rem;
     line-height: 1.45;
     text-align: center;
   }
@@ -728,7 +761,7 @@
   }
 
   .tim-skill-sidebar .tim-section-head h2 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     line-height: 1.2;
   }
 
@@ -756,7 +789,7 @@
   .tim-skill-list .tim-kpi b {
     width: 100%;
     margin-bottom: 0.25rem;
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     line-height: 1.2;
     text-align: center;
   }
@@ -764,7 +797,7 @@
   .tim-skill-list .tim-kpi span,
   .tim-skill-list .tim-kpi small {
     width: 100%;
-    font-size: 0.66rem;
+    font-size: 0.64rem;
     line-height: 1.35;
     text-align: center;
   }
@@ -796,8 +829,8 @@
   .frag-title {
     max-width: 360px;
     margin: 0 auto 0.75rem;
-    font-size: clamp(1.75rem, 8vw, 2.4rem);
-    line-height: 1.15;
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+    line-height: 1.05;
     text-align: center;
   }
 
@@ -805,7 +838,7 @@
   .frag-intro {
     max-width: 310px;
     margin: 0 auto 1.25rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.45;
     text-align: center;
   }
@@ -843,7 +876,7 @@
     width: 100%;
     margin: 0 0 0.32rem;
     color: rgba(0, 0, 0, 0.68);
-    font-size: 0.66rem;
+    font-size: 0.64rem;
     font-weight: 800;
     line-height: 1;
     letter-spacing: 0.08em;
@@ -887,7 +920,7 @@
     border-radius: var(--radius-control);
     color: var(--color-text-dark);
     -webkit-text-fill-color: var(--color-text-dark);
-    font-size: 0.66rem;
+    font-size: 0.64rem;
     font-weight: 800;
     line-height: 1;
     text-align: center;
@@ -975,14 +1008,14 @@
 
   .frag-name {
     margin: 0;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 800;
     line-height: 1.2;
   }
 
   .frag-tag {
     margin: 0;
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     line-height: 1.3;
   }
 
@@ -1013,11 +1046,11 @@
   }
 
   .frag-modal-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .frag-modal-sub {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
   }
 
   .frag-modal-close {
@@ -1030,7 +1063,7 @@
     height: 34px;
     padding: 0;
     border-radius: 50%;
-    font-size: 1.45rem;
+    font-size: 1.35rem;
   }
 
   .frag-modal-body {
@@ -1063,6 +1096,20 @@
     font-size: 0.74rem;
   }
 
+  .projects-page-heading h1,
+  .frag-title,
+  .timspiration-title {
+    font-size: clamp(1.85rem, 8.5vw, 2.55rem) !important;
+    line-height: 1.05;
+  }
+
+  .projects-section-heading h2,
+  .tim-section-head h2,
+  .section-title,
+  .tcu-title {
+    font-size: clamp(1.2rem, 5.5vw, 1.65rem);
+  }
+
   .resources-page-redesign {
     overflow: visible;
   }
@@ -1088,7 +1135,7 @@
     min-height: 30px;
     margin: 0;
     padding: 0 2.5rem;
-    font-size: 0.68rem;
+    font-size: 0.66rem;
     line-height: 1.2;
     text-align: center;
   }
@@ -1106,7 +1153,7 @@
     min-width: 0;
     min-height: 34px;
     padding: 0.45rem 0.5rem;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     text-align: center;
   }
 
@@ -1131,7 +1178,7 @@
 
   .frag-control-label {
     margin-bottom: 0.28rem;
-    font-size: 0.62rem;
+    font-size: 0.6rem;
   }
 
   .frag-filters,
@@ -1143,7 +1190,7 @@
   .frag-control-panel .chip {
     min-height: 29px;
     padding: 0.33rem 0.25rem;
-    font-size: 0.63rem;
+    font-size: 0.61rem;
   }
 }
 
@@ -1178,8 +1225,8 @@
 
   .blog-post > p {
     margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.45;
+    font-size: 0.88rem;
+    line-height: 1.44;
   }
 
   .blog-post > p strong,
@@ -1189,7 +1236,7 @@
   }
 
   .blog-post > p + p {
-    margin-top: 0.65rem;
+    margin-top: 0.62rem;
   }
 
   .blog-post > p:empty {
@@ -1199,7 +1246,7 @@
 
 @media (max-width: 480px) {
   body {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   header {
@@ -1210,7 +1257,7 @@
   .site-title {
     gap: 0.3rem;
     margin-bottom: 0.75rem;
-    font-size: clamp(1rem, 4.6vw, 1.3rem) !important;
+    font-size: clamp(0.95rem, 4.3vw, 1.2rem) !important;
   }
 
   .site-title-character {
@@ -1228,7 +1275,7 @@
     min-height: 31px;
     padding: 0.36rem 0.25rem;
     border-radius: var(--radius-small);
-    font-size: 0.69rem;
+    font-size: 0.7rem;
   }
 
   .site-nav > a::before,
@@ -1238,6 +1285,20 @@
 
   main {
     padding: 0.75rem;
+  }
+
+  .projects-page-heading h1,
+  .frag-title,
+  .timspiration-title {
+    font-size: clamp(1.65rem, 7.6vw, 2.2rem) !important;
+    line-height: 1.05;
+  }
+
+  .projects-section-heading h2,
+  .tim-section-head h2,
+  .section-title,
+  .tcu-title {
+    font-size: clamp(1.15rem, 5.3vw, 1.5rem);
   }
 
   .tim-hero,
@@ -1269,7 +1330,7 @@
   }
 
   .home-intro .profile-hover-text {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
   }
 
   .home-creative-stack {
@@ -1280,16 +1341,26 @@
     padding: 1rem;
   }
 
-  .explore-card h3 {
-    font-size: 1.1rem;
+  .explore-card h3,
+  .tim-card h3,
+  .inspo-card h3,
+  .project-card h3,
+  .projects-showcase-content h3,
+  .blog-post h3 {
+    font-size: 0.95rem;
   }
 
-  .explore-card p {
-    font-size: 0.88rem;
+  .explore-card p,
+  .tim-card p,
+  .inspo-card p,
+  .project-card p,
+  .projects-showcase-content p {
+    font-size: 0.86rem;
+    line-height: 1.45;
   }
 
   .tim-title {
-    font-size: 2rem !important;
+    font-size: clamp(1.75rem, 7.8vw, 2.25rem) !important;
   }
 
   .social-icons img {
@@ -1303,13 +1374,13 @@
   }
 
   p {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.86rem;
+    line-height: 1.45;
   }
 
   .blog-post > p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.86rem;
     line-height: 1.42;
   }
 
@@ -1320,12 +1391,54 @@
   }
 
   .blog-post > p + p {
-    margin-top: 0.6rem;
+    margin-top: 0.58rem;
   }
 
   .tim-badge,
-  .tim-pill {
-    font-size: 0.7rem;
+  .tim-pill,
+  .projects-tag {
+    font-size: 0.64rem;
+  }
+
+  #contact {
+    margin-top: 1.15rem;
+    padding: 0 0.65rem;
+  }
+
+  .contact-hero-inner {
+    padding: 1.35rem 1rem 1.2rem;
+  }
+
+  .contact-hero h2 {
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.15rem;
+    line-height: 1.15;
+  }
+
+  .contact-collab-note {
+    max-width: 290px;
+    margin: 0 auto;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .hero-actions {
+    gap: 0.55rem;
+    margin-top: 1rem;
+  }
+
+  #contact .btn {
+    min-height: 38px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .hint {
+    margin-top: 0.75rem;
+    font-size: 0.68rem;
+    line-height: 1.4;
   }
 
   #discord-cta {
@@ -1339,16 +1452,16 @@
 
   .discord-mobile-original h2 {
     padding-bottom: 0.65rem;
-    font-size: clamp(1.2rem, 6vw, 1.55rem);
+    font-size: clamp(1.1rem, 5.2vw, 1.45rem);
   }
 
   .discord-mobile-original .discord-description {
-    font-size: 0.86rem;
-    line-height: 1.5;
+    font-size: 0.82rem;
+    line-height: 1.45;
   }
 
   .discord-mobile-original .discord-link {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
   }
 
   .tim-skill-sidebar {
@@ -1365,12 +1478,12 @@
   }
 
   .tim-skill-list .tim-kpi b {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
   .tim-skill-list .tim-kpi span,
   .tim-skill-list .tim-kpi small {
-    font-size: 0.61rem;
+    font-size: 0.59rem;
   }
 
   .tim-skill-list .tim-kpi:last-child {
@@ -1390,7 +1503,7 @@
   .resources-page-redesign .projects-nav-prompt {
     min-height: 29px;
     padding: 0 2.35rem;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
   }
 
   .resources-page-redesign .projects-category-links {
@@ -1400,7 +1513,7 @@
   .resources-page-redesign .projects-category-nav a {
     min-height: 32px;
     padding: 0.4rem 0.35rem;
-    font-size: 0.68rem;
+    font-size: 0.66rem;
   }
 
   .resources-page-redesign .projects-nav-close {
@@ -1417,29 +1530,43 @@
   }
 
   .frag-control-panel {
-    width: 100%;
-    gap: 0.45rem;
-    padding: 0.52rem;
+    width: min(330px, 100%);
+    gap: 0.38rem;
+    padding: 0.45rem;
     border-radius: var(--radius-card);
   }
 
   .frag-control-label {
-    margin-bottom: 0.24rem;
-    font-size: 0.58rem;
-    letter-spacing: 0.07em;
+    margin-bottom: 0.2rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.06em;
   }
 
-  .frag-filters,
-  .frag-creator-filters,
+  .frag-filters {
+    gap: 0.26rem;
+  }
+
+  .frag-creator-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.26rem;
+  }
+
+  .frag-creator-filters .chip:first-child {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+  }
+
   .frag-actions {
-    gap: 0.3rem;
+    gap: 0.26rem;
   }
 
   .frag-control-panel .chip {
-    min-height: 27px;
-    padding: 0.29rem 0.18rem;
+    min-height: 26px;
+    padding: 0.26rem 0.15rem;
     border-radius: var(--radius-small);
-    font-size: 0.6rem;
+    font-size: 0.54rem;
+    line-height: 1.05;
   }
 
   .frag-grid {
@@ -1462,11 +1589,11 @@
   }
 
   .frag-name {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
   }
 
   .frag-tag {
-    font-size: 0.58rem;
+    font-size: 0.56rem;
   }
 
   .frag-music {
@@ -1493,7 +1620,7 @@
 @media (max-width: 380px) {
   header h1,
   .site-title {
-    font-size: clamp(0.9rem, 4.3vw, 1.1rem) !important;
+    font-size: clamp(0.88rem, 4.1vw, 1.05rem) !important;
   }
 
   .site-title-character {
@@ -1511,7 +1638,20 @@
   .nav-dropdown-toggle {
     min-height: 31px;
     padding: 0.33rem 0.4rem;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
+  }
+
+  .projects-page-heading h1,
+  .frag-title,
+  .timspiration-title {
+    font-size: clamp(1.5rem, 7.2vw, 1.95rem) !important;
+  }
+
+  .projects-section-heading h2,
+  .tim-section-head h2,
+  .section-title,
+  .tcu-title {
+    font-size: clamp(1.05rem, 5vw, 1.35rem);
   }
 
   .tim-skill-list .tim-kpi {
@@ -1519,21 +1659,22 @@
   }
 
   .tim-skill-list .tim-kpi b {
-    font-size: 0.76rem;
+    font-size: 0.74rem;
   }
 
   .tim-skill-list .tim-kpi span,
   .tim-skill-list .tim-kpi small {
-    font-size: 0.58rem;
+    font-size: 0.56rem;
   }
 
   .frag-control-panel {
-    padding: 0.46rem;
+    width: min(300px, 100%);
+    padding: 0.42rem;
   }
 
   .frag-control-panel .chip {
-    min-height: 26px;
-    font-size: 0.58rem;
+    min-height: 25px;
+    font-size: 0.52rem;
   }
 
   .frag-grid {
@@ -1580,6 +1721,11 @@
   .frag-creator-filters,
   .frag-actions {
     grid-template-columns: 1fr;
+  }
+
+  .frag-creator-filters .chip:first-child {
+    grid-column: auto;
+    width: 100%;
   }
 
   .frag-control-panel .chip {
