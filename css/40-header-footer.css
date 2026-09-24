@@ -214,6 +214,10 @@ header > nav > a.current-page,
   letter-spacing: -0.02em;
 }
 
+.site-nav-toggle {
+  display: none;
+}
+
 .site-title-text {
   display: inline-block;
   color: #fff;

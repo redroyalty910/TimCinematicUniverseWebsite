@@ -40,3 +40,22 @@
     });
   });
 })();
+
+const siteNavToggle = document.getElementById("siteNavToggle");
+const siteNav = document.getElementById("siteNav");
+
+if (siteNavToggle && siteNav) {
+
+  siteNavToggle.addEventListener("click", () => {
+
+    const isOpen = siteNav.classList.toggle("is-open");
+
+    siteNavToggle.setAttribute("aria-expanded", isOpen);
+
+    siteNavToggle.textContent = isOpen
+      ? "x~ CLOSE THIS MENU ~x"
+      : "☆~ MENU ~☆";
+
+  });
+
+}

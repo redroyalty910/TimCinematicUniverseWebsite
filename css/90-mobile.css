@@ -1,3 +1,7 @@
+.site-nav-toggle {
+  display: none;
+}
+
 @media (max-width: 900px) {
   html,
   body {
@@ -1747,5 +1751,129 @@
   .home-intro .profile-hover-text,
   .discord-mobile-original .about-image {
     transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  header h1,
+  .site-title {
+    margin-bottom: 0.35rem;
+  }
+
+  .site-nav-toggle {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 100px;
+    min-height: 20px;
+    margin: 0 auto;
+    padding: 0.10rem 0.5rem;
+    border: 2px solid transparent;
+    border-radius: var(--radius-control);
+    background:
+      linear-gradient(var(--pastel-lavender), var(--pastel-lavender)) padding-box,
+      var(--rainbow) border-box;
+    background-size:
+      100% 100%,
+      300% 100%;
+    color: var(--color-text-dark);
+    -webkit-text-fill-color: var(--color-text-dark);
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    text-shadow: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    animation: mobile-menu-rainbow 7s linear infinite;
+    transition:
+      transform var(--transition-fast),
+      box-shadow var(--transition-fast);
+  }
+
+  .site-nav-toggle:hover,
+  .site-nav-toggle:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-red-hover);
+  }
+
+  .site-nav-toggle:active {
+    transform: translateY(1px) scale(0.98);
+  }
+
+  header > nav.site-nav {
+    display: none;
+  }
+
+  header > nav.site-nav.is-open {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+    width: min(390px, calc(100% - 1rem));
+    margin: 0.55rem auto 0;
+    animation: mobile-nav-open 0.2s ease-out;
+  }
+
+  header > nav.site-nav > a,
+  header > nav.site-nav > .nav-dropdown {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  header > nav.site-nav > a,
+  header > nav.site-nav .nav-dropdown-toggle {
+    width: 100%;
+    min-width: 0;
+    min-height: 36px;
+    padding: 0.4rem 0.35rem;
+    font-size: 0.72rem;
+  }
+
+  header > nav.site-nav > .nav-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header > nav.site-nav .nav-dropdown-menu {
+    z-index: 300;
+  }
+}
+
+@keyframes mobile-nav-open {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobile-menu-rainbow {
+  from {
+    background-position:
+      0 0,
+      0 50%;
+  }
+
+  to {
+    background-position:
+      0 0,
+      300% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav-toggle,
+  header > nav.site-nav.is-open {
+    animation: none;
   }
 }
