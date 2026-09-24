@@ -1291,6 +1291,11 @@
     padding: 0.75rem;
   }
 
+  .home-intro {
+    margin-top: 0.25rem;
+    padding-top: 0.5rem;
+  }
+
   .projects-page-heading h1,
   .frag-title,
   .timspiration-title {
