@@ -1,3 +1,4 @@
+
 .discord-link {
   font-weight: 800;
   text-decoration: none;
@@ -17,32 +18,38 @@
 }
 
 #discord-cta {
-  width: min(900px, calc(100% - 5rem));
-  margin: 5rem auto 4rem;
+  width: min(900px, calc(100% - 3rem));
+  margin: 2.5rem auto 4rem;
   padding: 0;
 }
 
 .discord-desktop-card {
-  padding: 2.4rem 2.75rem 2.7rem;
-  border: 2px solid transparent;
-  border-radius: var(--radius-panel);
-  background:
-    linear-gradient(var(--color-paper), var(--color-paper)) padding-box,
-    var(--rainbow) border-box;
-  background-size:
-    100% 100%,
-    300% 100%;
-  animation: rainbow-flow 20s linear infinite;
-  box-shadow: var(--shadow-soft);
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(220px, 300px);
+  grid-template-areas:
+    "heading image"
+    "description image";
+  justify-content: center;
+  align-items: center;
+  column-gap: clamp(1.5rem, 3vw, 3rem);
+  row-gap: 0.6rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  animation: none;
+  box-shadow: none;
+  text-align: left;
 }
 
 .discord-desktop-card h2 {
-  margin: 0 auto 0.6rem;
+  grid-area: heading;
+  align-self: end;
+  margin: 0;
   padding: 0;
   border: 0;
-  font-size: clamp(1.75rem, 3vw, 2.4rem);
-  line-height: 1.15;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.25;
 }
 
 .discord-description {
@@ -50,13 +57,24 @@
   margin: 0 auto 1.8rem;
   color: var(--color-text-soft);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.discord-desktop-card .discord-description {
+  grid-area: description;
+  align-self: start;
+  max-width: 38ch;
+  margin: 0;
+  text-align: left;
 }
 
 .discord-image-link {
+  grid-area: image;
   display: block;
-  width: min(520px, 100%);
-  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  justify-self: center;
   border-radius: var(--radius-card);
   color: inherit;
   text-decoration: none;
@@ -72,6 +90,7 @@
 }
 
 .discord-image-link .about-image {
+  display: block;
   width: 100%;
   max-width: none;
   margin: 0;
@@ -82,19 +101,18 @@
 .discord-photo-message {
   position: absolute;
   left: 50%;
-  bottom: 1.25rem;
-  width: calc(100% - 2rem);
-  max-width: 470px;
-  padding: 0.65rem 0.85rem;
-  transform: translateX(-50%) translateY(12px);
+  bottom: calc(100% + 12px);
+  width: min(270px, 70vw);
+  padding: 0.7rem 0.85rem;
+  transform: translateX(-50%) translateY(8px);
   border-radius: var(--radius-control);
-  background: rgba(15, 15, 20, 0.9);
+  background: rgba(15, 15, 20, 0.93);
   color: #fff;
   font-family: var(--font-ui);
-  font-size: 0.88rem;
-  font-weight: 800;
-  line-height: 1.35;
-  letter-spacing: 0.02em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
   text-align: center;
   opacity: 0;
   visibility: hidden;
@@ -108,7 +126,7 @@
 
 .discord-image-link:hover .discord-photo-wrap,
 .discord-image-link:focus-visible .discord-photo-wrap {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 .discord-image-link:hover .about-image,
@@ -121,6 +139,29 @@
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 760px) {
+  .discord-desktop-card {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "heading"
+      "description"
+      "image";
+    justify-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .discord-desktop-card h2,
+  .discord-desktop-card .discord-description {
+    text-align: center;
+  }
+
+  .discord-image-link {
+    width: 220px;
+    max-width: 100%;
+  }
 }
 
 :where(
