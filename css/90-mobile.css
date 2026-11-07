@@ -2138,60 +2138,38 @@
     transform: scale(1.025);
   }
 
-
-header > nav.site-nav > a:last-of-type::after {
-  content: "© 2026 Tim Mills ☆ All rights may or may not be reserved.";
-  position: absolute;
-  top: calc(100% + 1.6rem);
-  left: calc(var(--mobile-sidebar-align-left, 50%) + 18px);
-  display: block;
-  width: var(--mobile-sidebar-align-width, 108.7%);
-  padding: 1rem 0.1rem 0;
-
-  background-image:
-    linear-gradient(#1c1721, #1c1721),
-    var(--rainbow);
-
-  background-size:
-    100% 2px,
-    34% 4px;
-
-  background-repeat: no-repeat;
-
-  background-position:
-    center top,
-    right top;
-
-  color: #4d405d;
-  -webkit-text-fill-color: #4d405d;
-  font-family: var(--font-ui, inherit);
-  font-size: 0.67rem;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0;
-  text-align: center;
-  text-shadow: none;
-  white-space: normal;
-  pointer-events: none;
-  transform: translateX(-50%);
-
-  animation: mobile-footer-rainbow 5.5s ease-in-out infinite alternate;
-}
-
-@keyframes mobile-footer-rainbow {
-  from {
+  header > nav.site-nav > a:last-of-type::after {
+    content: "© 2026 Tim Mills ☆ All rights may or may not be reserved.";
+    position: absolute;
+    top: calc(100% + 1.6rem);
+    left: calc(var(--mobile-sidebar-align-left, 50%) + 18px);
+    display: block;
+    width: var(--mobile-sidebar-align-width, 108.7%);
+    padding: 1rem 0.1rem 0;
+    background-image:
+      linear-gradient(#1c1721, #1c1721),
+      var(--rainbow);
+    background-size:
+      100% 2px,
+      34% 4px;
+    background-repeat: no-repeat;
     background-position:
       center top,
-      35% top;
+      right top;
+    color: #4d405d;
+    -webkit-text-fill-color: #4d405d;
+    font-family: var(--font-ui, inherit);
+    font-size: 0.67rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-align: center;
+    text-shadow: none;
+    white-space: normal;
+    pointer-events: none;
+    transform: translateX(-50%);
+    animation: mobile-footer-rainbow 5.5s ease-in-out infinite alternate;
   }
-
-  to {
-    background-position:
-      center top,
-      100% top;
-  }
-}
-
 
   header > nav.site-nav > .nav-dropdown {
     position: relative !important;
@@ -2457,5 +2435,31 @@ header > nav.site-nav > a:last-of-type::after {
   header > nav.site-nav::after,
   header > nav.site-nav > .nav-dropdown::before {
     display: none;
+  }
+}
+
+
+@keyframes mobile-footer-rainbow {
+  from {
+    background-position:
+      center top,
+      35% top;
+  }
+
+  to {
+    background-position:
+      center top,
+      100% top;
+  }
+}
+
+@media (max-width: 900px) {
+  #discord-cta .discord-mobile-original {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    animation: none;
+    box-shadow: none;
   }
 }
