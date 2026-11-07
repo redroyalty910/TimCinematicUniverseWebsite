@@ -4,6 +4,305 @@
   margin: clamp(2rem, 4vw, 3rem) auto 4rem;
 }
 
+.blog-toolbar {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 370px);
+  align-items: start;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin: 0 0 2.2rem;
+  padding: 0.5rem 0 1.8rem;
+  border-bottom: 0;
+}
+
+.blog-toolbar::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(370px, 100%);
+  height: 2px;
+  background: #141119;
+}
+
+.blog-toolbar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 92.5px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--rainbow);
+  background-size: 300% 100%;
+  animation:
+    blog-bottom-rainbow-travel 5.8s ease-in-out infinite alternate,
+    rainbow-flow 11s linear infinite;
+}
+
+.blog-toolbar-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.blog-toolbar .blog-page-title {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 0.8rem;
+  padding: 0 0 0.45rem;
+  border: 0 !important;
+  border-bottom: 0 !important;
+  background: none !important;
+  box-shadow: none;
+  color: #16121a;
+  -webkit-text-fill-color: #16121a;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  text-shadow: none;
+  animation: none;
+}
+
+.blog-toolbar .blog-page-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #141119;
+}
+
+.blog-toolbar .blog-page-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 35%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--rainbow);
+  background-size: 300% 100%;
+  transform: none;
+  --accent-end: 65%;
+  animation:
+    blog-rainbow-travel 4.8s ease-in-out infinite alternate,
+    rainbow-flow 11s linear infinite;
+}
+
+.blog-toolbar-intro > .blog-heading-rule {
+  display: none;
+}
+
+.blog-heading-rule {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  margin: 0.65rem 0 0.95rem;
+  background: #141119;
+}
+
+.blog-heading-rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 25%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--rainbow);
+  background-size: 300% 100%;
+  --accent-end: 75%;
+  animation:
+    blog-rainbow-travel 5.3s ease-in-out infinite alternate,
+    rainbow-flow 11s linear infinite;
+}
+
+@keyframes blog-rainbow-travel {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: var(--accent-end, 75%);
+  }
+}
+
+@keyframes blog-bottom-rainbow-travel {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 277.5px;
+  }
+}
+
+.blog-results {
+  margin: 0;
+  color: #665a75;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.blog-toolbar-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.blog-search-label,
+.blog-sort legend {
+  color: #30233c;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.blog-search-label {
+  display: block;
+  margin-bottom: 0.1rem;
+}
+
+.blog-toolbar #blogSearch {
+  width: 100%;
+  min-height: 46px;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(112, 85, 146, 0.22);
+  border-radius: 14px;
+  background: rgba(255, 253, 255, 0.94);
+  color: var(--color-text-dark);
+  font: inherit;
+  font-size: 0.92rem;
+  box-shadow: 0 4px 15px rgba(66, 39, 88, 0.06);
+  animation: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.blog-toolbar #blogSearch:focus-visible {
+  outline: 2px solid #a183e6;
+  outline-offset: 2px;
+  border-color: #a183e6;
+  box-shadow: 0 0 0 4px rgba(188, 155, 247, 0.15);
+}
+
+.blog-sort {
+  display: block;
+  min-width: 0;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.blog-sort legend {
+  float: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-sort-rule {
+  margin: 0.6rem 0 0.8rem;
+}
+
+.blog-sort-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-sort-option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  cursor: pointer;
+}
+
+.blog-sort-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.blog-sort-option span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.53rem 0.9rem;
+  border: 1px solid rgba(70, 44, 95, 0.15);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  color: #25202b;
+  -webkit-text-fill-color: #25202b;
+  font-family: var(--font-ui, inherit);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  text-shadow: none;
+  cursor: pointer;
+  animation: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.blog-sort-option input:checked + span {
+  border-color: rgba(100, 66, 144, 0.3);
+  background: var(--rainbow);
+  background-size: 300% 100%;
+  color: #15121b;
+  -webkit-text-fill-color: #15121b;
+  box-shadow: 0 4px 13px rgba(116, 66, 162, 0.17);
+  animation: rainbow-hover-shift 7s linear infinite;
+}
+
+.blog-sort-option:hover span {
+  border-color: rgba(255, 0, 64, 0.5);
+  box-shadow: 0 0 12px rgba(255, 0, 64, 0.18);
+  transform: translateY(-1px);
+}
+
+.blog-sort-option input:focus-visible + span {
+  outline: 2px solid #7b61ff;
+  outline-offset: 2px;
+}
+
+.blog-empty {
+  margin: 1.2rem 0 2rem;
+  padding: 2rem 1rem;
+  border: 1px solid rgba(115, 88, 157, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #4f3f61;
+  text-align: center;
+  font-weight: 700;
+}
+
+.blog-empty[hidden],
+.blog-post[hidden] {
+  display: none !important;
+}
+
 .blog-title {
   margin: 0 0 0.25rem;
   background: var(--rainbow);
@@ -92,6 +391,11 @@ footer {
     margin-bottom: 3.5rem;
   }
 
+  .blog-toolbar {
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+  }
+
   .blog-feed .blog-post {
     margin-bottom: 2.25rem;
     padding: 1.5rem;
@@ -101,7 +405,7 @@ footer {
   .blog-feed .blog-post h3 {
     margin: 0 0 0.65rem;
     font-size: clamp(1.3rem, 3vw, 1.65rem);
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.3;
     letter-spacing: -0.01em;
   }
@@ -149,6 +453,40 @@ footer {
 
   .blog-feed .blog-post li + li {
     margin-top: 0.7rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .blog-toolbar {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .blog-toolbar::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  .blog-toolbar::after {
+    left: 0;
+    right: auto;
+    width: 25%;
+    max-width: none;
+    --accent-end: 75%;
+    animation:
+      blog-rainbow-travel 5.8s ease-in-out infinite alternate,
+      rainbow-flow 11s linear infinite;
+  }
+
+  .blog-toolbar .blog-page-title {
+    font-size: clamp(1.35rem, 4.5vw, 1.85rem);
+  }
+
+  .blog-toolbar-intro {
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -213,6 +551,29 @@ footer {
     margin-bottom: 2.75rem;
   }
 
+  .blog-toolbar {
+    margin-bottom: 1.65rem;
+  }
+
+  .blog-toolbar .blog-page-title {
+    font-size: clamp(1.28rem, 5.9vw, 1.52rem);
+    letter-spacing: -0.055em;
+  }
+
+  .blog-toolbar-controls {
+    gap: 0.55rem;
+  }
+
+  .blog-sort-option span {
+    padding: 0.48rem 0.78rem;
+    font-size: 0.74rem;
+  }
+
+  .blog-toolbar #blogSearch {
+    min-height: 44px;
+    font-size: 0.86rem;
+  }
+
   .blog-feed .blog-post {
     margin-bottom: 1.85rem;
     padding: 1.3rem;
@@ -259,6 +620,10 @@ footer {
     padding: 1.1rem;
   }
 
+  .blog-toolbar .blog-page-title {
+    font-size: clamp(1.15rem, 5.7vw, 1.3rem);
+  }
+
   .blog-feed .blog-post h3 {
     font-size: 1.2rem;
   }
@@ -276,7 +641,16 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   .blog-title,
-  .blog-post {
+  .blog-post,
+  .blog-heading-rule::after,
+  .blog-toolbar::after,
+  .blog-toolbar .blog-page-title::after,
+  .blog-sort-option input:checked + span {
     animation: none;
+  }
+
+  .blog-sort-option span,
+  .blog-toolbar #blogSearch {
+    transition: none;
   }
 }

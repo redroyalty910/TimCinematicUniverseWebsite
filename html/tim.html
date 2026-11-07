@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,9 @@
   <link rel="stylesheet" href="../css/10-layout.css">
   <link rel="stylesheet" href="../css/20-components.css">
   <link rel="stylesheet" href="../css/40-header-footer.css">
-  <link rel="stylesheet" href="../css/50-tim-page.css">
   <link rel="stylesheet" href="../css/60-contact.css">
   <link rel="stylesheet" href="../css/90-mobile.css" />
+  <link rel="stylesheet" href="../css/50-tim-page.css">
 </head>
 <body>
   <header id="top">
@@ -27,20 +28,20 @@
         <img class="character-static" src="../images/STARGORE_BLINK.gif" alt="">
         <img class="character-moving" src="../images/STARGORE_SCARED.png" alt="">
       </span>
-</h1>
+    </h1>
 
-<button
-  type="button"
-  class="site-nav-toggle"
-  id="siteNavToggle"
-  aria-expanded="false"
-  aria-controls="siteNav"
-  aria-label="Open navigation menu"
->
-  ☰
-</button>
+    <button
+      type="button"
+      class="site-nav-toggle"
+      id="siteNavToggle"
+      aria-expanded="false"
+      aria-controls="siteNav"
+      aria-label="Open navigation menu"
+    >
+      ☰
+    </button>
 
-<nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+    <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
       <a href="../index.html">Home!</a>
       <a href="tim.html" class="current-page" aria-current="page">Tim ☆!</a>
       <div class="nav-dropdown">
@@ -67,32 +68,52 @@
       <a href="contact.html">Contact!</a>
     </nav>
   </header>
+
   <main class="tim-page">
     <div class="tim-top-layout">
-      <section class="tim-hero">
-<a
-  class="tim-pfp-link"
-  href="https://www.youtube.com/watch?v=yBbr9n9JnZg"
-  target="_blank"
-  rel="noopener"
->
-  <span class="tim-pfp-frame">
-    <img class="tim-pfp" src="../images/tim_portrait2.jpg" alt="Tim Mills" />
-    <span class="tim-pfp-hover-text">☆ click for his anthem ☆</span>
-  </span>
-</a>
-        <div>
-          <h1 class="tim-title">
+      <section class="tim-hero" aria-labelledby="tim-intro-title">
+        <a
+          class="tim-pfp-link"
+          href="https://www.youtube.com/watch?v=yBbr9n9JnZg"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="tim-pfp-frame">
+            <img class="tim-pfp" src="../images/tim_portrait2.jpg" alt="Tim Mills" />
+            <span class="tim-pfp-hover-text">☆ click for anthem ☆</span>
+          </span>
+        </a>
+
+        <div class="tim-hero-copy">
+          <h1 class="tim-title" id="tim-intro-title">
             <span class="tim-title-star tim-title-star-left">☆</span>
             <span class="tim-title-text">TIM MILLS</span>
             <span class="tim-title-star tim-title-star-right">☆</span>
           </h1>
-          <p class="tim-muted">
+
+          <p class="tim-muted tim-role-line">
             <strong>Storyteller • Game Dev • Musician • Writer / Poet • Programmer • Hooper • Video Editor</strong>
-            <br />
-            I shape the world around me; heart and stars on my sleeve. As a creator who deeply values quality projects; I am far-beyond <u>deathly serious</u> about my artistic vision.
-            With that in mind, I truly do apologize if I take a while to produce the most of my results... My own perfectionism will 100% be the death of me!
           </p>
+
+          <div class="tim-bio">
+            <p>
+              Hailing from <u>NEW YORK</u>, I shape the world around me with my heart and all the stars in the sky right on my sleeve. I'm truly a storyteller, but I find myself enjoying
+              various mediums of creation far beyond that of simple literature. In my free time, I like to hang out with my incredibly lovely friends, appraise various beers and wines, stream on twitch, build
+              interesting personal programs, develop video games, compose weird music, write suspicious poetry, and play pickup basketball!
+            </p>
+            <p>
+              Anytime somebody tells me that they're bored, I always respond with... <i>"Well, hey! It sounds like you could use a new hobby!"</i>
+              Because truly, there are too many interesting and entertaining hobbies for us to choose from! I haven't been bored in 24 years now... and counting!
+              The truth to that is, I find tremendous joy in art, I think it's the reason I'm alive and I don't think we'd be living a life worth living without it!
+            </p>
+            <p>
+              As a creator who deeply values quality projects, I am far beyond <u>serious</u> about my artistic vision.
+              I have a tendency to obsess over even the smallest details, and I revisit specific things that probably never even needed revisiting. With that information in mind, I truly do apologize if I
+              take a while to produce the most of my results... My own perfectionism will 100% be the death of me, but until then, I plan on making some pretty cool stuff for all of us! At the end of the day, I'm just some
+              guy who really, really loves to create things. I have a lot of ideas, a lot of love to give, and hopefully a whole lot of time to... do all the things that I think I want to do!
+            </p>
+          </div>
+
           <div class="tim-badgebar">
             <span class="tim-badge">NYC Based</span>
             <span class="tim-badge">Sexual Style</span>
@@ -101,6 +122,7 @@
             <span class="tim-badge">Hope Enthusiast</span>
             <span class="tim-badge">☆.</span>
           </div>
+
           <div class="social-icons">
             <a href="https://x.com/EGOD3ATHH" target="_blank" rel="noopener">
               <img src="../images/Twitter Logo PNG.png" alt="Twitter">
@@ -135,48 +157,58 @@
           </div>
         </div>
       </section>
-      <aside class="tim-skill-sidebar">
+
+      <section class="tim-skill-sidebar" aria-labelledby="tim-skills-title">
         <div class="tim-section-head">
-          <h2>☆ Professional Skillset ☆</h2>
+          <h2 id="tim-skills-title">☆ Professional Skillset ☆</h2>
         </div>
+
         <div class="tim-skill-list">
           <div class="tim-kpi">
             <b>Programmer</b>
             <span class="tim-muted">C++ • C# • Python • JavaScript • HTML • CSS • SQL</span>
           </div>
+
           <div class="tim-kpi">
             <b>Operating Systems</b>
             <span class="tim-muted">Windows • macOS • Linux</span>
           </div>
+
           <div class="tim-kpi">
             <b>Game Dev</b>
             <span class="tim-muted">Unity • Godot</span>
           </div>
+
           <div class="tim-kpi">
             <b>Musician</b>
             <span class="tim-muted">FL Studio</span>
           </div>
+
           <div class="tim-kpi">
             <b>Microsoft Office</b>
             <span class="tim-muted">Word • Excel • PowerPoint</span>
           </div>
+
           <div class="tim-kpi">
             <b>Media Manipulator</b>
             <span class="tim-muted">DaVinci Resolve • Adobe Photoshop</span>
           </div>
+
           <div class="tim-kpi">
             <b>Getting Buckets Since</b>
             <span class="tim-muted">2014</span>
           </div>
         </div>
-      </aside>
+      </section>
     </div>
+
     <div class="tim-main-column">
       <div class="tim-lower-layout">
         <section class="tim-lower-section">
           <div class="tim-section-head">
             <h2>☆ Tim-Specific Mini Q&A ☆</h2>
           </div>
+
           <div class="tim-qa-grid">
             <div class="tim-card">
               <h3>Can we COLLAB?</h3>
@@ -184,18 +216,21 @@
                 I am open to collaborations! of any kind! include details, and for my contact... <a href="contact.html">click here</a>! Oh, and I REALLY LIKE ARTISTS! LIKE, THE ONES THAT DRAW!
               </p>
             </div>
+
             <div class="tim-card">
               <h3>What do you want people to feel?</h3>
               <p class="tim-muted">
                 I think I want to give people a sense of hope.
               </p>
             </div>
+
             <div class="tim-card">
               <h3>When do we get to hear more about your... anything?</h3>
               <p class="tim-muted">
-                I'll try to drop meaningful updates on the <a href="blog.html">BLOG</a> page at least once a month!
+                I drop meaningful updates on the <a href="blog.html">BLOG</a> page at least once a month!
               </p>
             </div>
+
             <div class="tim-card">
               <h3>What are your plans here going forward?</h3>
               <p class="tim-muted">
@@ -204,10 +239,12 @@
             </div>
           </div>
         </section>
+
         <section class="tim-lower-section">
           <div class="tim-section-head">
             <h2>☆ Likes and Dislikes ☆</h2>
           </div>
+
           <div class="tim-likes-grid">
             <div class="tim-card">
               <h3>Things I Like!</h3>
@@ -215,26 +252,32 @@
                 <span class="tim-pill">Flowers</span>
                 <span class="tim-pill">Bees</span>
                 <span class="tim-pill">American robin</span>
+                <span class="tim-pill">Yuengling Traditional Lager</span>
+                <span class="tim-pill">Nice Clothes</span>
                 <span class="tim-pill">Miller High Life</span>
                 <span class="tim-pill">Nice Clothes</span>
                 <span class="tim-pill">Clean grammar</span>
                 <span class="tim-pill">Basketball</span>
+                <span class="tim-pill">New York Knicks</span>
                 <span class="tim-pill">Spaghetti</span>
                 <span class="tim-pill">Her</span>
                 <span class="tim-pill">Spring</span>
+                <span class="tim-pill">Lagers</span>
+                <span class="tim-pill">Moscato</span>
                 <span class="tim-pill">Long Walks / Bike Rides</span>
                 <span class="tim-pill">Vodka Redbull</span>
-                <span class="tim-pill">Corona</span>
                 <span class="tim-pill">Mozzarella</span>
                 <span class="tim-pill">Spicy Food</span>
               </div>
             </div>
+
             <div class="tim-card">
               <h3>Things I do NOT Like!</h3>
               <div>
                 <span class="tim-pill">Bland UI</span>
                 <span class="tim-pill">Tuna Fish</span>
                 <span class="tim-pill">Grilled Hot-dogs</span>
+                <span class="tim-pill">Guiness</span>
                 <span class="tim-pill">Eggs (Sometimes)</span>
                 <span class="tim-pill">Wrong "Your / You're"</span>
                 <span class="tim-pill">Snow</span>
@@ -248,12 +291,14 @@
         </section>
       </div>
     </div>
+
     <footer>
       <p>© 2026 Tim Mills ☆ All rights may or may not be reserved.</p>
       <img src="../images/STARGORE_BLINK.gif" alt="Fun gif" class="footer-gif">
       <p><small>Recruiters? <a href="pro.html">View my professional portfolio here</a>.</small></p>
     </footer>
   </main>
+
   <script src="../js/site-nav.js"></script>
 </body>
 </html>

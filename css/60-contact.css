@@ -1,52 +1,60 @@
+
 #contact {
   max-width: 980px;
-  margin: 32px auto 70px;
+  margin: 48px auto 70px;
   padding: 0 18px;
 }
+
 .contact-hero {
   max-width: 900px;
   margin: 0 auto;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  background:
-    linear-gradient(var(--color-paper), var(--color-paper)) padding-box,
-    var(--rainbow) border-box;
-  background-size:
-    100% 100%,
-    300% 100%;
-  animation: rainbow-bg 15s linear infinite;
-  box-shadow: var(--shadow-card);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  animation: none;
 }
+
 .contact-hero-inner {
   max-width: 720px;
   margin: 0 auto;
   padding: 38px 28px 32px;
   text-align: center;
 }
+
 .contact-hero h2 {
   position: relative;
-  width: 100%;
-  margin: 0 0 18px;
-  padding-bottom: 14px;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 28px;
+  padding: 0 0 14px;
   border: 0;
+  background: none;
+  color: var(--color-text-dark);
   font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 600;
   line-height: 1.3;
+  text-align: center;
 }
+
 .contact-hero h2::before {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background: var(--color-border);
 }
+
 .contact-hero h2::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
-  width: 80px;
+  width: 25%;
   height: 3px;
   border-radius: 999px;
   background: var(--rainbow);
@@ -55,44 +63,53 @@
     contact-line-travel 5s ease-in-out infinite alternate,
     rainbow-slide 6s linear infinite;
 }
+
 .contact-collab-note {
   max-width: 650px;
   margin: 0 auto;
   color: var(--color-text-soft);
   font-size: 0.92rem;
-  line-height: 1.7;
+  line-height: 1.8;
   text-align: center;
 }
+
 .hero-actions {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin: 24px auto 0;
+  margin: 32px auto 0;
 }
+
 #contact .btn {
   min-width: 190px;
   font-weight: 700;
 }
+
 #contact .btn.ghost {
   --rb-fill: var(--pastel-lavender);
 }
+
 .hint {
   display: block;
-  margin-top: 14px;
+  margin-top: 18px;
   color: var(--color-text-soft);
   font-size: 0.76rem;
+  line-height: 1.5;
 }
+
 .contact-socials {
-  margin: 28px auto 10px;
+  margin: 36px auto 10px;
   text-align: center;
 }
+
 .social-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
 }
+
 .social-row a {
   display: flex;
   align-items: center;
@@ -114,11 +131,13 @@
     transform var(--transition-fast),
     box-shadow var(--transition-fast);
 }
+
 .social-row a:hover,
 .social-row a:focus-visible {
   transform: translateY(-3px);
   box-shadow: var(--shadow-red-hover);
 }
+
 .social-row img {
   display: block;
   width: 34px;
@@ -127,41 +146,81 @@
   max-height: 34px;
   object-fit: contain;
 }
+
 @keyframes contact-line-travel {
   from {
     left: 0;
   }
+
   to {
-    left: calc(100% - 80px);
+    left: 75%;
   }
 }
+
 @media (max-width: 700px) {
   #contact {
-    margin-top: 22px;
+    margin-top: 28px;
     padding: 0 12px;
   }
+
   .contact-hero-inner {
     padding: 28px 18px 26px;
   }
+
+  .contact-hero h2 {
+    margin-bottom: 24px;
+  }
+
+  .contact-collab-note {
+    line-height: 1.7;
+  }
+
   .hero-actions {
     flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
   }
+
   #contact .btn {
     width: min(100%, 330px);
     min-width: 0;
   }
-}
-@media (max-width: 480px) {
-  .contact-hero h2 {
-    font-size: 1.35rem;
+
+  .contact-socials {
+    margin-top: 30px;
   }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    margin-top: 22px;
+  }
+
+  .contact-hero-inner {
+    padding: 24px 12px 20px;
+  }
+
+  .contact-hero h2 {
+    padding-bottom: 12px;
+    margin-bottom: 22px;
+    font-size: 1.35rem;
+    font-weight: 600;
+  }
+
   .contact-collab-note {
     font-size: 0.84rem;
+    line-height: 1.7;
   }
+
+  .hero-actions {
+    margin-top: 26px;
+  }
+
   .social-row a {
     width: 45px;
     height: 45px;
   }
+
   .social-row img {
     width: 30px;
     height: 30px;
@@ -169,12 +228,13 @@
     max-height: 30px;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  .contact-hero,
   .contact-hero h2::after,
   .social-row a {
     animation: none;
   }
+
   .social-row a {
     transition: none;
   }
