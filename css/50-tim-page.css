@@ -1045,3 +1045,7 @@
     transition: none;
   }
 }
+
+.tim-page .social-icons a[href*="itch.io"]::after {
+  content: "Itch.io";
+}

@@ -965,3 +965,86 @@ details.accordion .accordion-content {
     animation: none;
   }
 }
+
+/* Responsive homepage: keep creative cards visible on narrow desktops. */
+@media (min-width: 901px) and (max-width: 1699px) {
+  .home-intro {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    width: min(1180px, calc(100% - 3rem));
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .home-portrait-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .home-intro .profile-frame {
+    width: 258px;
+    height: 258px;
+  }
+
+  .home-intro .profile-pic {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home-intro .bio-and-links {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .home-creative-stack {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-self: stretch;
+    gap: 1.25rem;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .home-creative-stack .explore-card,
+  .home-creative-stack .explore-card:nth-child(1),
+  .home-creative-stack .explore-card:nth-child(2),
+  .home-creative-stack .explore-card:nth-child(3) {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transform: none;
+  }
+
+  .home-creative-stack .explore-card:hover,
+  .home-creative-stack .explore-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-red-hover);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .home-intro {
+    grid-template-columns: 220px minmax(0, 1fr);
+    column-gap: 1.6rem;
+  }
+
+  .home-intro .profile-frame {
+    width: 208px;
+    height: 208px;
+  }
+
+  .home-intro .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+}

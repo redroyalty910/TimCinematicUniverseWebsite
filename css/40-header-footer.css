@@ -1,3 +1,4 @@
+
 header {
   background: var(--rainbow);
   background-size: 400% 400%;
@@ -143,16 +144,36 @@ header > nav > a.current-page,
   pointer-events: auto;
 }
 
+/* ---------------------------------------
+   PROJECTS DROPDOWN CATEGORY BUTTONS
+   Animated rainbow borders + pastel fills
+--------------------------------------- */
+
 .nav-dropdown-menu a {
   --dropdown-fill: var(--pastel-yellow);
 
   display: block;
   width: 100%;
+  box-sizing: border-box;
   margin: 0;
   padding: 0.55rem 0.75rem;
-  border: 1px solid var(--color-border-soft);
+
+  /* Rainbow border */
+  border: 2px solid transparent;
   border-radius: var(--radius-control);
-  background: var(--dropdown-fill);
+
+  /* Pastel interior + animated rainbow outline */
+  background:
+    linear-gradient(
+      var(--dropdown-fill),
+      var(--dropdown-fill)
+    ) padding-box,
+    var(--rainbow) border-box;
+
+  background-size:
+    100% 100%,
+    300% 100%;
+
   color: var(--color-text-dark);
   -webkit-text-fill-color: var(--color-text-dark);
   font-family: var(--font-ui);
@@ -162,45 +183,59 @@ header > nav > a.current-page,
   text-align: left;
   text-decoration: none;
   text-shadow: none;
-  animation: none;
   filter: none;
+
+  animation: rainbow-flow 20s linear infinite;
+
   box-shadow: none;
+
   transition:
     transform var(--transition-fast),
     box-shadow var(--transition-fast);
 }
 
+/* Writing — lavender */
 .nav-dropdown-menu a:nth-child(2) {
   --dropdown-fill: var(--pastel-lavender);
 }
 
+/* Music — mint */
 .nav-dropdown-menu a:nth-child(3) {
   --dropdown-fill: var(--pastel-mint);
 }
 
+/* Friend-Work — blue */
 .nav-dropdown-menu a:nth-child(4) {
   --dropdown-fill: var(--pastel-blue);
 }
 
+/* Hover maintains animated rainbow border */
 .nav-dropdown-menu a:hover,
 .nav-dropdown-menu a:focus-visible {
   transform: translateX(3px);
-  background: var(--dropdown-fill);
+
   color: var(--color-text-dark);
   -webkit-text-fill-color: var(--color-text-dark);
-  animation: none;
+
   filter: none;
   box-shadow: var(--shadow-red-hover);
 }
 
+/* Active category keeps full rainbow fill */
 .nav-dropdown-menu a.current-project-category {
   background: var(--rainbow);
   background-size: 300% 100%;
+
   color: var(--color-text-dark);
   -webkit-text-fill-color: var(--color-text-dark);
+
   animation: rainbow-hover-shift 6s linear infinite;
   box-shadow: var(--shadow-red-hover);
 }
+
+/* ---------------------------------------
+   SITE TITLE
+--------------------------------------- */
 
 .site-title {
   display: inline-flex;
@@ -301,6 +336,10 @@ header > nav > a.current-page,
   animation-duration: 1.4s;
 }
 
+/* ---------------------------------------
+   FOOTER
+--------------------------------------- */
+
 footer,
 .site-footer {
   margin: 2rem auto 1.5rem;
@@ -320,6 +359,10 @@ footer a,
   color: #fff;
   text-decoration: underline;
 }
+
+/* ---------------------------------------
+   ANIMATIONS
+--------------------------------------- */
 
 @keyframes rainbow-hover-shift {
   from {
@@ -343,6 +386,10 @@ footer a,
   }
 }
 
+/* ---------------------------------------
+   HOVER SUPPORT
+--------------------------------------- */
+
 @media (hover: hover) {
   .nav-dropdown:hover .nav-dropdown-menu {
     opacity: 1;
@@ -355,6 +402,10 @@ footer a,
     transform: rotate(180deg);
   }
 }
+
+/* ---------------------------------------
+   TABLET
+--------------------------------------- */
 
 @media (max-width: 900px) {
   .nav-dropdown {
@@ -403,6 +454,10 @@ footer a,
   }
 }
 
+/* ---------------------------------------
+   MOBILE
+--------------------------------------- */
+
 @media (max-width: 640px) {
   header > nav > a {
     margin: 0 0.55rem;
@@ -422,6 +477,10 @@ footer a,
     margin: 3rem 0.85rem;
   }
 }
+
+/* ---------------------------------------
+   REDUCED MOTION
+--------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
   header,
