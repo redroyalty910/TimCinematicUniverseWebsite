@@ -1812,7 +1812,7 @@
   .site-nav-toggle {
     position: absolute;
     top: 50%;
-    right: 0.7rem;
+    right: 0.15rem;
     z-index: 1001;
     isolation: isolate;
 
